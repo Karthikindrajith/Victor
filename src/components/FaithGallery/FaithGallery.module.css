@@ -1,0 +1,560 @@
+.section {
+  position: relative;
+  width: 100%;
+  padding: 90px 0 75px;
+  overflow: hidden;
+  background: #071f35;
+  color: #ffffff;
+}
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.glow {
+  position: absolute;
+  top: -250px;
+  left: 50%;
+  width: 750px;
+  height: 500px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(55, 88, 115, 0.24);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.overline {
+  margin: 0 0 12px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 5px;
+
+  color: #d39a45;
+}
+
+.header h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(52px, 5vw, 68px);
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -1.5px;
+
+  color: #f5f1e9;
+}
+
+.header h2 em {
+  display: block;
+
+  margin-top: 7px;
+
+  font-style: italic;
+  font-weight: 500;
+
+  color: #d39a45;
+}
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 25px;
+}
+
+.divider span {
+  position: relative;
+
+  display: block;
+
+  width: 58px;
+  height: 1px;
+
+  background: #c99042;
+}
+
+.divider span::before,
+.divider span::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 4px;
+  height: 4px;
+
+  transform: translateY(-50%) rotate(45deg);
+
+  background: #c99042;
+}
+
+.divider span::before {
+  left: -8px;
+}
+
+.divider span::after {
+  right: -8px;
+}
+
+/* =========================================
+   GALLERY WRAPPER
+========================================= */
+
+.galleryWrapper {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   MOVING TRACK
+========================================= */
+
+.galleryTrack {
+  display: flex;
+
+  width: max-content;
+
+  animation: infiniteScroll 38s linear infinite;
+
+  will-change: transform;
+}
+
+/* Pause when mouse is over gallery */
+
+.galleryWrapper:hover .galleryTrack {
+  animation-play-state: paused;
+}
+
+/* =========================================
+   EACH GROUP
+========================================= */
+
+.galleryGroup {
+  display: flex;
+
+  flex-shrink: 0;
+
+  gap: 16px;
+
+  padding-right: 16px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+  position: relative;
+
+  flex: 0 0 190px;
+
+  width: 190px;
+  height: 260px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  background: #0b2a43;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(211, 154, 69, 0.75);
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.imageWrapper {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.9s cubic-bezier(0.2, 0.65, 0.25, 1),
+    filter 0.5s ease;
+}
+
+.card:hover .imageWrapper img {
+  transform: scale(1.08);
+
+  filter: saturate(1.05);
+}
+
+/* =========================================
+   IMAGE DARK OVERLAY
+========================================= */
+
+.imageShade {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(4, 22, 37, 0.03) 20%,
+      rgba(4, 22, 37, 0.12) 42%,
+      rgba(3, 18, 31, 0.9) 100%
+    );
+
+  pointer-events: none;
+}
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.cardNumber {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.cardNumber::after {
+  content: "";
+
+  display: block;
+
+  width: 22px;
+  height: 1px;
+
+  margin-top: 5px;
+
+  background: #d39a45;
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.cardContent {
+  position: absolute;
+
+  left: 16px;
+  right: 12px;
+  bottom: 16px;
+
+  z-index: 3;
+}
+
+.cardContent h3 {
+  margin: 0 0 5px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 12px;
+  line-height: 1.45;
+
+  font-weight: 600;
+
+  color: #ffffff;
+}
+
+.cardContent p {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.4px;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* =========================================
+   INFINITE ANIMATION
+========================================= */
+
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.bottom {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  margin-top: 35px;
+}
+
+.bottomLine {
+  width: min(1080px, 85%);
+
+  height: 1px;
+
+  margin-bottom: 22px;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bottom p {
+  margin: 0 0 20px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* =========================================
+   EXPLORE
+========================================= */
+
+.exploreLink {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #c99042;
+
+  text-decoration: none;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+
+  color: #ffffff;
+
+  transition:
+    gap 0.3s ease,
+    color 0.3s ease;
+}
+
+.exploreLink b {
+  font-family: Arial, sans-serif;
+
+  font-size: 20px;
+  font-weight: 300;
+
+  line-height: 0;
+
+  color: #d39a45;
+
+  transition: transform 0.3s ease;
+}
+
+.exploreLink:hover {
+  gap: 22px;
+
+  color: #d39a45;
+}
+
+.exploreLink:hover b {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .section {
+    padding-top: 75px;
+  }
+
+  .card {
+    flex-basis: 175px;
+
+    width: 175px;
+    height: 245px;
+  }
+
+  .galleryGroup {
+    gap: 14px;
+
+    padding-right: 14px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .section {
+    padding: 65px 0 55px;
+  }
+
+  .header {
+    margin-bottom: 35px;
+  }
+
+  .overline {
+    font-size: 9px;
+
+    letter-spacing: 4px;
+  }
+
+  .header h2 {
+    font-size: 48px;
+  }
+
+  .galleryTrack {
+    animation-duration: 32s;
+  }
+
+  .galleryGroup {
+    gap: 12px;
+
+    padding-right: 12px;
+  }
+
+  .card {
+    flex-basis: 155px;
+
+    width: 155px;
+    height: 220px;
+  }
+
+  .cardContent {
+    left: 13px;
+    bottom: 13px;
+  }
+
+  .cardContent h3 {
+    font-size: 11px;
+  }
+
+  .cardContent p {
+    font-size: 8px;
+  }
+
+  .bottom {
+    margin-top: 28px;
+  }
+
+  .bottom p {
+    width: 82%;
+
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+  .header h2 {
+    font-size: 43px;
+  }
+
+  .galleryTrack {
+    animation-duration: 28s;
+  }
+
+  .card {
+    flex-basis: 145px;
+
+    width: 145px;
+    height: 205px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .galleryTrack {
+    animation: none;
+  }
+
+  .card,
+  .imageWrapper img,
+  .exploreLink,
+  .exploreLink b {
+    transition: none;
+  }
+}

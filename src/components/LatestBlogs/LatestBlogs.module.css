@@ -1,0 +1,1427 @@
+/* =========================================================
+   LATEST BLOGS
+========================================================= */
+
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 900px;
+  padding: 115px 0 125px;
+  overflow: hidden;
+
+  background: #061a2d;
+  color: #ffffff;
+
+  isolation: isolate;
+}
+
+/* =========================================================
+   BACKGROUND IMAGE
+========================================================= */
+
+.backgroundImage {
+  position: absolute;
+  inset: -3%;
+
+  width: 106%;
+  height: 106%;
+
+  background-image: url("/images/church/blogs-bg.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  z-index: 0;
+
+  transform: scale(1);
+
+  animation: cinematicZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes cinematicZoom {
+  0% {
+    transform: scale(1);
+    background-position: center center;
+  }
+
+  50% {
+    transform: scale(1.045);
+    background-position: 51% 49%;
+  }
+
+  100% {
+    transform: scale(1.08);
+    background-position: 49% 51%;
+  }
+}
+
+/* =========================================================
+   DARK OVERLAY
+========================================================= */
+
+.backgroundOverlay {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 15, 28, 0.97) 0%,
+      rgba(4, 24, 42, 0.89) 25%,
+      rgba(5, 28, 47, 0.77) 50%,
+      rgba(4, 23, 40, 0.85) 75%,
+      rgba(2, 13, 25, 0.97) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2, 13, 24, 0.35) 0%,
+      rgba(2, 15, 27, 0.9) 100%
+    );
+
+  z-index: 1;
+
+  animation: overlayPulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes overlayPulse {
+  0% {
+    opacity: 0.92;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   GOLD GLOW
+========================================================= */
+
+.glow {
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  right: -230px;
+  top: 40px;
+
+  border-radius: 50%;
+
+  background: rgba(213, 163, 76, 0.14);
+
+  filter: blur(110px);
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  animation: glowMove 10s ease-in-out infinite alternate;
+}
+
+@keyframes glowMove {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translate(-70px, 40px) scale(1.1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translate(-120px, -30px) scale(1.18);
+    opacity: 0.5;
+  }
+}
+
+/* =========================================================
+   LIGHT BEAM
+========================================================= */
+
+.lightBeam {
+  position: absolute;
+
+  width: 500px;
+  height: 900px;
+
+  top: -250px;
+  left: 50%;
+
+  transform: translateX(-50%) rotate(12deg);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.035),
+    transparent
+  );
+
+  filter: blur(25px);
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  animation: lightBeamMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes lightBeamMove {
+  0% {
+    opacity: 0.1;
+    transform: translateX(-65%) rotate(12deg);
+  }
+
+  100% {
+    opacity: 0.45;
+    transform: translateX(25%) rotate(12deg);
+  }
+}
+
+/* =========================================================
+   SIDE DECORATIONS
+========================================================= */
+
+.leftDecoration,
+.rightDecoration {
+  position: absolute;
+
+  top: 50%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  z-index: 5;
+
+  pointer-events: none;
+
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.leftDecoration {
+  left: 25px;
+
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
+}
+
+.rightDecoration {
+  right: 25px;
+
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: right center;
+
+  text-align: right;
+}
+
+.decorationLine {
+  width: 80px;
+  height: 1px;
+
+  margin-top: 10px;
+
+  background: rgba(213, 163, 76, 0.6);
+}
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.container {
+  position: relative;
+
+  width: min(1320px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  z-index: 10;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  text-align: center;
+
+  margin-bottom: 65px;
+
+  animation: headerReveal 1s ease both;
+}
+
+@keyframes headerReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.eyebrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-bottom: 20px;
+}
+
+.eyebrow span {
+  display: block;
+
+  width: 48px;
+  height: 1px;
+
+  background: #d5a34c;
+
+  position: relative;
+}
+
+.eyebrow span:first-child::after,
+.eyebrow span:last-child::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #d5a34c;
+
+  transform: translateY(-50%);
+}
+
+.eyebrow span:first-child::after {
+  right: 0;
+}
+
+.eyebrow span:last-child::after {
+  left: 0;
+}
+
+.eyebrow p {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: #d5a34c;
+}
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.header h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(48px, 5vw, 76px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+
+  color: #ffffff;
+}
+
+.header h2 em {
+  color: #d5a34c;
+
+  font-style: italic;
+
+  font-weight: 400;
+}
+
+.subtitle {
+  margin: 24px auto 0;
+
+  max-width: 650px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+
+  letter-spacing: 0.3px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  animation: subtitleReveal 1s ease 0.25s both;
+}
+
+@keyframes subtitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   BLOG GRID
+========================================================= */
+
+.blogGrid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  align-items: stretch;
+}
+
+/* =========================================================
+   BLOG CARD
+========================================================= */
+
+.blogCard {
+  position: relative;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: #f7f2e9;
+
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.22),
+    0 3px 10px rgba(0, 0, 0, 0.12);
+
+  opacity: 0;
+
+  transform: translateY(55px);
+
+  animation:
+    cardReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  animation-delay: calc(var(--card-index) * 0.18s);
+
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s ease;
+}
+
+@keyframes cardReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(55px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blogCard:hover {
+  transform: translateY(-12px);
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.35),
+    0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.imageWrapper {
+  position: relative;
+
+  width: 100%;
+  height: 305px;
+
+  overflow: hidden;
+
+  background: #071f35;
+}
+
+/* =========================================================
+   BLOG IMAGE
+========================================================= */
+
+.blogImage {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1);
+
+  transition:
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.6s ease;
+}
+
+.blogCard:hover .blogImage {
+  transform: scale(1.1);
+
+  filter: brightness(1.08);
+}
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.05) 20%,
+      rgba(0, 0, 0, 0.15) 45%,
+      rgba(0, 0, 0, 0.72) 100%
+    );
+
+  z-index: 1;
+}
+
+/* =========================================================
+   IMAGE SHINE
+========================================================= */
+
+.imageShine {
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+
+  transform: skewX(-18deg);
+
+  z-index: 3;
+
+  pointer-events: none;
+}
+
+.blogCard:hover .imageShine {
+  animation: imageShine 0.9s ease;
+}
+
+@keyframes imageShine {
+  0% {
+    left: -120%;
+  }
+
+  100% {
+    left: 140%;
+  }
+}
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.category {
+  position: absolute;
+
+  top: 22px;
+  left: 22px;
+
+  z-index: 4;
+
+  padding: 8px 13px;
+
+  background: rgba(7, 31, 53, 0.88);
+
+  border: 1px solid rgba(213, 163, 76, 0.5);
+
+  backdrop-filter: blur(8px);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #ffffff;
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+.blogCard:hover .category {
+  transform: translateY(-4px);
+
+  background: rgba(213, 163, 76, 0.95);
+}
+
+/* =========================================================
+   DATE BOX
+========================================================= */
+
+.dateBox {
+  position: absolute;
+
+  left: 22px;
+  bottom: 22px;
+
+  z-index: 4;
+
+  width: 62px;
+  height: 72px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(7, 31, 53, 0.9);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.45s ease,
+    background 0.45s ease;
+}
+
+.blogCard:hover .dateBox {
+  transform: translateY(-5px);
+
+  background: rgba(7, 31, 53, 0.98);
+}
+
+.dateBox span {
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  color: #d5a34c;
+}
+
+.dateBox strong {
+  margin: 2px 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: #ffffff;
+}
+
+.dateBox small {
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing: 1px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================================================
+   IMAGE ARROW
+========================================================= */
+
+.imageArrow {
+  position: absolute;
+
+  right: 22px;
+  bottom: 22px;
+
+  z-index: 5;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #d5a34c;
+
+  color: #061a2d;
+
+  text-decoration: none;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+  transform: scale(0.95);
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.45s ease;
+}
+
+.imageArrow span {
+  display: inline-block;
+
+  font-size: 22px;
+
+  line-height: 1;
+
+  transition: transform 0.45s ease;
+}
+
+.blogCard:hover .imageArrow {
+  transform: scale(1.08);
+
+  background: #ffffff;
+}
+
+.blogCard:hover .imageArrow span {
+  transform: rotate(45deg);
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.cardContent {
+  position: relative;
+
+  padding: 30px 30px 32px;
+
+  background: #f7f2e9;
+
+  color: #071f35;
+}
+
+/* =========================================================
+   TOP LINE
+========================================================= */
+
+.cardTopLine {
+  width: 38px;
+  height: 2px;
+
+  margin-bottom: 19px;
+
+  background: #d5a34c;
+
+  transition:
+    width 0.45s ease;
+}
+
+.blogCard:hover .cardTopLine {
+  width: 70px;
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.cardContent h3 {
+  margin: 0;
+
+  min-height: 66px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.3px;
+
+  color: #071f35;
+}
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.cardContent p {
+  margin: 17px 0 25px;
+
+  min-height: 72px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+
+  color: #5d6670;
+}
+
+/* =========================================================
+   READ ARTICLE
+========================================================= */
+
+.readArticle {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  width: fit-content;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #071f35;
+}
+
+.readArticle > span {
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease;
+}
+
+.readLine {
+  width: 45px;
+  height: 1px;
+
+  background: #d5a34c;
+
+  transition:
+    width 0.45s ease;
+}
+
+.readArticle b {
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  transition:
+    transform 0.4s ease,
+    color 0.3s ease;
+}
+
+.readArticle:hover > span {
+  color: #b98527;
+}
+
+.readArticle:hover .readLine {
+  width: 65px;
+}
+
+.readArticle:hover b {
+  transform: translateX(5px);
+
+  color: #b98527;
+}
+
+/* =========================================================
+   BOTTOM AREA
+========================================================= */
+
+.bottomArea {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 55px;
+
+  animation: bottomReveal 1s ease 0.8s both;
+}
+
+@keyframes bottomReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   VIEW ALL BUTTON
+========================================================= */
+
+.viewAll {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  min-height: 52px;
+
+  padding: 0 11px 0 25px;
+
+  border: 1px solid rgba(213, 163, 76, 0.7);
+
+  border-radius: 100px;
+
+  background: rgba(7, 31, 53, 0.45);
+
+  backdrop-filter: blur(10px);
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  color: #ffffff;
+
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.viewAll b {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #d5a34c;
+
+  color: #061a2d;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.viewAll:hover {
+  background: rgba(213, 163, 76, 0.12);
+
+  border-color: #d5a34c;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.viewAll:hover b {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   BOTTOM LEFT
+========================================================= */
+
+.bottomLeft {
+  position: absolute;
+
+  left: 0;
+  bottom: -62px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  animation: bottomFade 1.2s ease 0.9s both;
+}
+
+.bottomLeft strong {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  letter-spacing: 3px;
+
+  color: #ffffff;
+}
+
+.bottomLeft span {
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes bottomFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   BOTTOM RIGHT
+========================================================= */
+
+.bottomRight {
+  position: absolute;
+
+  right: 0;
+  bottom: -68px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  animation: bottomFade 1.2s ease 0.7s both;
+}
+
+.bottomRight > span {
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.bottomRight i {
+  display: block;
+
+  width: 45px;
+  height: 1px;
+
+  background: rgba(213, 163, 76, 0.65);
+}
+
+.bottomRight button {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.bottomRight button:hover {
+  background: #d5a34c;
+
+  border-color: #d5a34c;
+
+  color: #061a2d;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   BOTTOM DARK SILHOUETTE
+========================================================= */
+
+.bottomSilhouette {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 120px;
+
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(1, 10, 18, 0.75)
+  );
+
+  z-index: 3;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .section {
+    padding: 100px 0 120px;
+  }
+
+  .container {
+    width: min(100% - 50px, 1000px);
+  }
+
+  .blogGrid {
+    gap: 20px;
+  }
+
+  .imageWrapper {
+    height: 270px;
+  }
+
+  .cardContent {
+    padding: 26px 24px 29px;
+  }
+
+  .cardContent h3 {
+    font-size: 22px;
+  }
+
+  .cardContent p {
+    font-size: 12px;
+  }
+
+  .leftDecoration,
+  .rightDecoration {
+    display: none;
+  }
+
+  .bottomLeft,
+  .bottomRight {
+    bottom: -58px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .section {
+    min-height: auto;
+
+    padding: 85px 0 100px;
+  }
+
+  .container {
+    width: calc(100% - 36px);
+  }
+
+  .header {
+    margin-bottom: 45px;
+  }
+
+  .eyebrow {
+    gap: 12px;
+  }
+
+  .eyebrow span {
+    width: 30px;
+  }
+
+  .eyebrow p {
+    font-size: 8px;
+    letter-spacing: 2.5px;
+  }
+
+  .header h2 {
+    font-size: clamp(42px, 12vw, 58px);
+
+    letter-spacing: -1.5px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    padding: 0 8px;
+  }
+
+  .subtitle br {
+    display: none;
+  }
+
+  .blogGrid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .blogCard {
+    animation-delay: calc(var(--card-index) * 0.12s);
+  }
+
+  .imageWrapper {
+    height: 280px;
+  }
+
+  .cardContent {
+    padding: 27px 24px 30px;
+  }
+
+  .cardContent h3 {
+    min-height: auto;
+
+    font-size: 24px;
+  }
+
+  .cardContent p {
+    min-height: auto;
+
+    margin-bottom: 24px;
+
+    font-size: 13px;
+  }
+
+  .bottomArea {
+    margin-top: 40px;
+  }
+
+  .bottomLeft,
+  .bottomRight {
+    position: relative;
+
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    justify-content: center;
+
+    margin-top: 35px;
+  }
+
+  .bottomLeft {
+    flex-direction: column;
+
+    gap: 8px;
+
+    text-align: center;
+  }
+
+  .bottomRight {
+    margin-top: 22px;
+  }
+
+  .bottomSilhouette {
+    height: 80px;
+  }
+
+  .glow {
+    width: 400px;
+    height: 400px;
+
+    right: -200px;
+  }
+
+  .lightBeam {
+    display: none;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .section {
+    padding: 70px 0 85px;
+  }
+
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  .header h2 {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+  }
+
+  .imageWrapper {
+    height: 245px;
+  }
+
+  .category {
+    top: 16px;
+    left: 16px;
+
+    padding: 7px 10px;
+
+    font-size: 7px;
+  }
+
+  .dateBox {
+    left: 16px;
+    bottom: 16px;
+
+    width: 56px;
+    height: 66px;
+  }
+
+  .imageArrow {
+    right: 16px;
+    bottom: 16px;
+
+    width: 48px;
+    height: 48px;
+  }
+
+  .imageArrow span {
+    font-size: 19px;
+  }
+
+  .cardContent {
+    padding: 24px 20px 27px;
+  }
+
+  .cardContent h3 {
+    font-size: 22px;
+  }
+
+  .cardContent p {
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+  .viewAll {
+    min-height: 48px;
+
+    padding-left: 20px;
+
+    gap: 16px;
+  }
+
+  .viewAll b {
+    width: 29px;
+    height: 29px;
+  }
+
+  .bottomRight {
+    gap: 9px;
+  }
+
+  .bottomRight i {
+    width: 30px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .backgroundImage,
+  .backgroundOverlay,
+  .glow,
+  .lightBeam,
+  .blogCard,
+  .header,
+  .subtitle,
+  .bottomArea,
+  .bottomLeft,
+  .bottomRight {
+    animation: none !important;
+  }
+
+  .blogCard,
+  .blogImage,
+  .imageArrow,
+  .imageArrow span,
+  .category,
+  .dateBox,
+  .cardTopLine,
+  .readLine,
+  .readArticle b,
+  .viewAll,
+  .viewAll b {
+    transition: none !important;
+  }
+
+  .blogCard {
+    opacity: 1;
+    transform: none;
+  }
+}

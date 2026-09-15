@@ -1,0 +1,1901 @@
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  position: relative;
+  width: 100%;
+
+  background: #f5f0e7;
+  color: #071f35;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
+.mainFooter {
+  position: relative;
+
+  padding: 90px 0 75px;
+
+  overflow: hidden;
+
+  background: #f5f0e7;
+}
+
+
+/* =========================================================
+   BACKGROUND CHURCH
+========================================================= */
+
+.backgroundChurch {
+  position: absolute;
+
+  right: -80px;
+  bottom: -30px;
+
+  width: 55%;
+  height: 90%;
+
+  background-image:
+    url("/images/church/church-01.png");
+
+  background-repeat: no-repeat;
+
+  background-position: right bottom;
+
+  background-size: contain;
+
+  opacity: 0.12;
+
+  filter:
+    grayscale(1)
+    contrast(0.8);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  animation:
+    churchFloat 12s ease-in-out infinite alternate;
+}
+
+
+@keyframes churchFloat {
+  0% {
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+  100% {
+    transform:
+      translateY(-10px)
+      scale(1.025);
+  }
+}
+
+
+/* =========================================================
+   BACKGROUND OVERLAY
+========================================================= */
+
+.backgroundOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 78% 70%,
+      rgba(194, 143, 55, 0.08),
+      transparent 32%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(245, 240, 231, 1) 0%,
+      rgba(245, 240, 231, 0.98) 45%,
+      rgba(245, 240, 231, 0.84) 72%,
+      rgba(245, 240, 231, 0.7) 100%
+    );
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+  position: relative;
+
+  z-index: 5;
+
+  width:
+    min(
+      1400px,
+      calc(100% - 100px)
+    );
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.35fr
+    0.8fr
+    0.9fr
+    1.15fr
+    0.85fr;
+
+  gap: 0;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brandColumn {
+  padding-right: 55px;
+
+  border-right:
+    1px solid rgba(
+      7,
+      31,
+      53,
+      0.12
+    );
+}
+
+
+.logoLink {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+}
+
+
+.logo {
+  width: 125px;
+  height: 125px;
+
+  object-fit: contain;
+
+  filter:
+    sepia(0.25)
+    saturate(0.75);
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.logoLink:hover .logo {
+  transform:
+    translateY(-4px)
+    scale(1.04);
+}
+
+
+.brandSmall {
+  margin-top: 8px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+
+  color: #a87428;
+}
+
+
+.brandColumn h2 {
+  margin: 8px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 31px;
+
+  line-height: 0.98;
+
+  font-weight: 400;
+
+  letter-spacing: -1px;
+
+  color: #071f35;
+}
+
+
+.location {
+  margin-top: 13px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 5px;
+
+  color: #a87428;
+}
+
+
+.brandLine {
+  width: 42px;
+  height: 1px;
+
+  margin: 22px 0;
+
+  background: #b98332;
+}
+
+
+.brandDescription {
+  max-width: 310px;
+
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+
+  color: #48515a;
+}
+
+
+.brandValues {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 23px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  color: #a87428;
+}
+
+
+.brandValues i {
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: #a87428;
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.socialArea {
+  margin-top: 42px;
+}
+
+
+.socialArea h3 {
+  margin: 0 0 17px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  letter-spacing: 2px;
+
+  color: #071f35;
+}
+
+
+.socialLinks {
+  display: flex;
+
+  gap: 12px;
+}
+
+
+.socialLink {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(
+      168,
+      116,
+      40,
+      0.7
+    );
+
+  border-radius: 50%;
+
+  color: #071f35;
+
+  text-decoration: none;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+.socialLink svg {
+  width: 19px;
+  height: 19px;
+}
+
+
+.socialLink:hover {
+  background: #071f35;
+
+  border-color: #071f35;
+
+  color: #ffffff;
+
+  transform:
+    translateY(-4px);
+}
+
+
+/* =========================================================
+   LINK COLUMNS
+========================================================= */
+
+.linkColumn,
+.visitColumn,
+.visitCta {
+  padding-left: 38px;
+  padding-right: 38px;
+}
+
+
+.linkColumn {
+  border-right:
+    1px solid rgba(
+      7,
+      31,
+      53,
+      0.12
+    );
+}
+
+
+.columnHeading {
+  margin-bottom: 28px;
+}
+
+
+.columnHeading h3 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  letter-spacing: 3px;
+
+  color: #071f35;
+}
+
+
+.columnHeading span {
+  display: block;
+
+  width: 40px;
+  height: 2px;
+
+  margin-top: 15px;
+
+  background: #b98332;
+}
+
+
+/* =========================================================
+   FOOTER NAV
+========================================================= */
+
+.footerNav {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 15px;
+}
+
+
+.footerNav a {
+  position: relative;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 16px;
+
+  line-height: 1.2;
+
+  color: #263746;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.footerNav a::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 1px;
+
+  background: #b98332;
+
+  transition:
+    width 0.35s ease;
+}
+
+
+.footerNav a:hover {
+  color: #a87428;
+
+  transform:
+    translateX(4px);
+}
+
+
+.footerNav a:hover::before {
+  width: 100%;
+}
+
+
+/* =========================================================
+   TAMIL
+========================================================= */
+
+.tamilNav {
+  gap: 13px;
+}
+
+
+.tamilNav a {
+  font-size: 15px;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   VISIT
+========================================================= */
+
+.visitColumn {
+  border-right:
+    1px solid rgba(
+      7,
+      31,
+      53,
+      0.12
+    );
+}
+
+
+.contactItem {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+  margin-bottom: 21px;
+}
+
+
+.contactIcon {
+  flex:
+    0 0 auto;
+
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #b98332;
+}
+
+
+.contactIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+
+.contactItem p,
+.contactItem a {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  color: #354653;
+
+  text-decoration: none;
+}
+
+
+.contactItem a {
+  transition:
+    color 0.3s ease;
+}
+
+
+.contactItem a:hover {
+  color: #a87428;
+}
+
+
+/* =========================================================
+   DIRECTIONS
+========================================================= */
+
+.directionButton {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  min-height: 49px;
+
+  margin-top: 8px;
+
+  padding:
+    0 20px 0 23px;
+
+  border:
+    1px solid #b98332;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  color: #071f35;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.directionButton b {
+  font-size: 18px;
+
+  font-weight: 400;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+.directionButton:hover {
+  background: #071f35;
+
+  color: #ffffff;
+
+  transform:
+    translateY(-3px);
+}
+
+
+.directionButton:hover b {
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   VISIT CTA
+========================================================= */
+
+.visitCta {
+  position: relative;
+
+  text-align: center;
+}
+
+
+.crossDecoration {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin:
+    0 auto 22px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 29px;
+
+  color: #b98332;
+}
+
+
+.ctaSmall {
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 6px;
+
+  color: #071f35;
+}
+
+
+.visitCta h3 {
+  margin:
+    8px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 57px;
+
+  line-height: 0.95;
+
+  font-weight: 400;
+
+  letter-spacing: 3px;
+
+  color: #b98332;
+}
+
+
+.ctaLine {
+  width: 40px;
+  height: 1px;
+
+  margin:
+    25px auto 18px;
+
+  background: #b98332;
+}
+
+
+.visitCta p {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  font-style: italic;
+
+  color: #52606b;
+}
+
+
+.learnButton {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 25px;
+
+  min-height: 49px;
+
+  padding:
+    0 18px 0 23px;
+
+  border:
+    1px solid #b98332;
+
+  border-radius: 50px;
+
+  background: transparent;
+
+  color: #071f35;
+
+  text-decoration: none;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.learnButton b {
+  font-size: 18px;
+
+  font-weight: 400;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+.learnButton:hover {
+  background: #b98332;
+
+  color: #ffffff;
+
+  transform:
+    translateY(-3px);
+}
+
+
+.learnButton:hover b {
+  transform:
+    translateX(4px);
+}
+
+
+.ctaWords {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  margin-top: 27px;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 4px;
+
+  color: #7c858b;
+}
+
+
+/* =========================================================
+   PRAYER STRIP
+========================================================= */
+
+.prayerStrip {
+  position: relative;
+
+  min-height: 145px;
+
+  background: #071f35;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+
+.prayerImage {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 15%;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(7, 31, 53, 0.15),
+      rgba(7, 31, 53, 0.65)
+    ),
+    url("/images/church/mass-prayer.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  opacity: 0.85;
+}
+
+
+.prayerContainer {
+  position: relative;
+
+  z-index: 5;
+
+  width:
+    min(
+      1400px,
+      calc(100% - 100px)
+    );
+
+  min-height: 145px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    0.8fr
+    1.2fr;
+
+  align-items: center;
+
+  gap: 50px;
+}
+
+
+.prayerText {
+  padding-left: 30px;
+}
+
+
+.prayerEyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 10px;
+}
+
+
+.prayerEyebrow span {
+  width: 40px;
+  height: 1px;
+
+  background: #d5a34c;
+}
+
+
+.prayerEyebrow p {
+  margin: 0;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 4px;
+
+  color: #d5a34c;
+}
+
+
+.prayerText h3 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  color: #ffffff;
+}
+
+
+.mobileBreak {
+  display: none;
+}
+
+
+/* =========================================================
+   PLAN BUTTON
+========================================================= */
+
+.planButton {
+  justify-self: center;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  min-height: 57px;
+
+  padding:
+    0 14px 0 28px;
+
+  border-radius: 50px;
+
+  background: #d5a34c;
+
+  color: #071f35;
+
+  text-decoration: none;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  box-shadow:
+    0 10px 30px rgba(
+      0,
+      0,
+      0,
+      0.15
+    );
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.planButton b {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.8
+    );
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+.planButton:hover {
+  transform:
+    translateY(-4px);
+
+  background: #e4bb72;
+
+  box-shadow:
+    0 15px 35px rgba(
+      0,
+      0,
+      0,
+      0.25
+    );
+}
+
+
+.planButton:hover b {
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   PRAYER ACTIONS
+========================================================= */
+
+.prayerActions {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  height: 100%;
+
+  border-left:
+    1px solid rgba(
+      255,
+      255,
+      255,
+      0.15
+    );
+}
+
+
+.prayerActions a {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  border-right:
+    1px solid rgba(
+      255,
+      255,
+      255,
+      0.15
+    );
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    background 0.35s ease;
+}
+
+
+.prayerActions a:hover {
+  background:
+    rgba(
+      213,
+      163,
+      76,
+      0.12
+    );
+}
+
+
+.actionIcon {
+  margin-bottom: 7px;
+
+  font-size: 25px;
+
+  line-height: 1;
+
+  color: #d5a34c;
+}
+
+
+.prayerActions strong,
+.prayerActions small {
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  font-weight: 500;
+}
+
+
+.prayerActions small {
+  color: #d5a34c;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.copyright {
+  min-height: 125px;
+
+  background: #041624;
+
+  border-top:
+    1px solid rgba(
+      213,
+      163,
+      76,
+      0.6
+    );
+
+  color: #ffffff;
+}
+
+
+.copyrightContainer {
+  width:
+    min(
+      1400px,
+      calc(100% - 100px)
+    );
+
+  min-height: 125px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.3fr
+    0.7fr
+    1.4fr
+    0.5fr;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+
+.copyrightText {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.copyrightText p,
+.copyrightText span {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.8
+    );
+}
+
+
+.copyrightText span {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.5
+    );
+}
+
+
+/* =========================================================
+   COPYRIGHT CENTER
+========================================================= */
+
+.copyrightCenter {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+}
+
+
+.copyrightCenter span {
+  width: 60px;
+  height: 1px;
+
+  background:
+    rgba(
+      213,
+      163,
+      76,
+      0.55
+    );
+}
+
+
+.copyrightCenter div {
+  color: #d5a34c;
+
+  font-size: 23px;
+}
+
+
+/* =========================================================
+   LEGAL
+========================================================= */
+
+.legalLinks {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 13px;
+}
+
+
+.legalLinks a {
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.5px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.65
+    );
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.legalLinks a:hover {
+  color: #d5a34c;
+}
+
+
+.legalLinks i {
+  width: 1px;
+  height: 13px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.3
+    );
+}
+
+
+/* =========================================================
+   FOOTER MOTTO
+========================================================= */
+
+.footerMotto {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+}
+
+
+.mottoIcon {
+  color: #d5a34c;
+
+  font-size: 32px;
+}
+
+
+.footerMotto p {
+  margin: 0;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 7px;
+
+  line-height: 2;
+
+  letter-spacing: 3px;
+
+  text-align: center;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.7
+    );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .container {
+    width:
+      min(
+        calc(100% - 60px),
+        1100px
+      );
+
+    grid-template-columns:
+      1.3fr
+      0.8fr
+      0.9fr;
+
+    row-gap: 55px;
+  }
+
+
+  .brandColumn {
+    grid-row: span 2;
+  }
+
+
+  .linkColumn:nth-of-type(3) {
+    border-right: none;
+  }
+
+
+  .visitColumn {
+    grid-column: 2 / 4;
+
+    border-right: none;
+
+    border-top:
+      1px solid rgba(
+        7,
+        31,
+        53,
+        0.12
+      );
+
+    padding-top: 45px;
+
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    column-gap: 50px;
+  }
+
+
+  .visitColumn .columnHeading {
+    grid-column: 1 / 3;
+  }
+
+
+  .visitCta {
+    grid-column: 2 / 4;
+  }
+
+
+  .prayerContainer {
+    width:
+      min(
+        calc(100% - 60px),
+        1100px
+      );
+
+    grid-template-columns:
+      1.2fr
+      0.7fr
+      1fr;
+
+    gap: 25px;
+  }
+
+
+  .copyrightContainer {
+    width:
+      min(
+        calc(100% - 60px),
+        1100px
+      );
+
+    grid-template-columns:
+      1fr
+      0.5fr
+      1.4fr;
+
+    row-gap: 20px;
+
+    padding: 25px 0;
+  }
+
+
+  .footerMotto {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .mainFooter {
+    padding:
+      70px 0 60px;
+  }
+
+
+  .container {
+    width:
+      calc(100% - 36px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 45px;
+  }
+
+
+  .backgroundChurch {
+    right: -100px;
+    bottom: 0;
+
+    width: 100%;
+    height: 45%;
+
+    opacity: 0.07;
+  }
+
+
+  .backgroundOverlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(245, 240, 231, 1) 0%,
+        rgba(245, 240, 231, 0.95) 60%,
+        rgba(245, 240, 231, 0.82) 100%
+      );
+  }
+
+
+  .brandColumn {
+    padding:
+      0 0 35px;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid rgba(
+        7,
+        31,
+        53,
+        0.12
+      );
+
+    text-align: center;
+  }
+
+
+  .logo {
+    width: 105px;
+    height: 105px;
+  }
+
+
+  .brandDescription {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .brandLine {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .brandValues,
+  .socialLinks {
+    justify-content: center;
+  }
+
+
+  .linkColumn,
+  .visitColumn,
+  .visitCta {
+    padding: 0;
+
+    border-right: none;
+  }
+
+
+  .linkColumn {
+    padding-bottom: 38px;
+
+    border-bottom:
+      1px solid rgba(
+        7,
+        31,
+        53,
+        0.12
+      );
+  }
+
+
+  .columnHeading {
+    text-align: center;
+
+    margin-bottom: 25px;
+  }
+
+
+  .columnHeading span {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .footerNav {
+    align-items: center;
+  }
+
+
+  .visitColumn {
+    display: block;
+
+    padding-bottom: 38px;
+
+    border-bottom:
+      1px solid rgba(
+        7,
+        31,
+        53,
+        0.12
+      );
+  }
+
+
+  .contactItem {
+    max-width: 290px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .directionButton {
+    display: flex;
+
+    width: fit-content;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .visitCta {
+    padding-top: 10px;
+  }
+
+
+  .visitCta h3 {
+    font-size: 53px;
+  }
+
+
+  /* PRAYER */
+
+  .prayerStrip {
+    min-height: auto;
+  }
+
+
+  .prayerImage {
+    width: 100%;
+
+    opacity: 0.18;
+  }
+
+
+  .prayerContainer {
+    width:
+      calc(100% - 36px);
+
+    padding:
+      45px 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+
+    text-align: center;
+  }
+
+
+  .prayerText {
+    padding-left: 0;
+  }
+
+
+  .prayerEyebrow {
+    justify-content: center;
+  }
+
+
+  .prayerText h3 {
+    font-size: 25px;
+  }
+
+
+  .planButton {
+    justify-self: auto;
+  }
+
+
+  .prayerActions {
+    width: 100%;
+
+    min-height: 120px;
+
+    border-left: none;
+
+    border-top:
+      1px solid rgba(
+        255,
+        255,
+        255,
+        0.15
+      );
+  }
+
+
+  /* COPYRIGHT */
+
+  .copyright {
+    min-height: auto;
+  }
+
+
+  .copyrightContainer {
+    width:
+      calc(100% - 36px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 30px 0;
+
+    gap: 22px;
+
+    text-align: center;
+  }
+
+
+  .copyrightText {
+    align-items: center;
+  }
+
+
+  .copyrightCenter {
+    display: none;
+  }
+
+
+  .legalLinks {
+    flex-wrap: wrap;
+  }
+
+
+  .footerMotto {
+    display: flex;
+
+    justify-content: center;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .mainFooter {
+    padding-top: 60px;
+  }
+
+
+  .brandColumn h2 {
+    font-size: 27px;
+  }
+
+
+  .brandDescription {
+    font-size: 13px;
+
+    padding:
+      0 10px;
+  }
+
+
+  .footerNav a {
+    font-size: 15px;
+  }
+
+
+  .tamilNav a {
+    font-size: 14px;
+  }
+
+
+  .visitCta h3 {
+    font-size: 48px;
+  }
+
+
+  .prayerText h3 {
+    font-size: 22px;
+  }
+
+
+  .mobileBreak {
+    display: block;
+  }
+
+
+  .prayerActions {
+    min-height: 105px;
+  }
+
+
+  .actionIcon {
+    font-size: 21px;
+  }
+
+
+  .prayerActions strong,
+  .prayerActions small {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .copyrightText p {
+    font-size: 11px;
+  }
+
+
+  .legalLinks {
+    gap: 8px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .backgroundChurch {
+    animation: none;
+  }
+
+
+  .logo,
+  .socialLink,
+  .footerNav a,
+  .directionButton,
+  .learnButton,
+  .planButton {
+    transition: none;
+  }
+}
