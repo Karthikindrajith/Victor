@@ -1,9 +1,16 @@
-export default function VocationsPage() {
+export default function TamilAboutUsPage() {
   return (
     <main>
-      <h1>Vocations</h1>
+      <h1>About Us</h1>
+
       <p>
-        Information about vocations will be available here.
+        Welcome to the Tamil section of Our Lady of Good Health Basilica,
+        Velankanni.
+      </p>
+
+      <p>
+        More information about the church, its history and spiritual activities
+        will be available here.
       </p>
     </main>
   );

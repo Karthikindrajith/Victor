@@ -1,9 +1,10 @@
-export default function VocationsPage() {
+export default function DutiesPage() {
   return (
     <main>
-      <h1>Vocations</h1>
+      <h1>Duties</h1>
       <p>
-        Information about vocations will be available here.
+        Information about the duties and responsibilities will be available
+        here.
       </p>
     </main>
   );
