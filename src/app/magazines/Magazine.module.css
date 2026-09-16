@@ -1,0 +1,1033 @@
+.page {
+  background: #f8f3e8;
+  color: #142b49;
+  overflow: hidden;
+}
+
+.container {
+  width: min(1380px, 92%);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: heroZoom 12s ease-in-out infinite alternate;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 28, 51, 0.88) 0%,
+      rgba(8, 28, 51, 0.58) 42%,
+      rgba(8, 28, 51, 0.15) 75%,
+      rgba(8, 28, 51, 0.2) 100%
+    );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  width: min(1380px, 92%);
+  margin: 0 auto;
+  padding-top: 70px;
+  animation: fadeUp 1s ease both;
+}
+
+.heroLine {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+
+  color: #d8b56b;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.heroLine span {
+  width: 42px;
+  height: 1px;
+  background: #d8b56b;
+}
+
+.heroContent h1 {
+  max-width: 800px;
+  margin: 0;
+
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(52px, 6vw, 86px);
+  line-height: 0.98;
+  font-weight: 400;
+}
+
+.heroContent h1 strong {
+  display: block;
+  color: #d8b56b;
+  font-weight: 400;
+}
+
+.heroTagline {
+  margin: 28px 0 25px;
+
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.heroTagline span {
+  margin: 0 10px;
+  color: #d8b56b;
+}
+
+.heroQuote {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.heroQuote small {
+  color: #e5c987;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+.heroSideText {
+  position: absolute;
+  z-index: 3;
+  right: 7%;
+  top: 50%;
+  transform: translateY(-40%);
+
+  display: flex;
+  flex-direction: column;
+
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  line-height: 1.25;
+  font-style: italic;
+  text-align: center;
+}
+
+.ornament {
+  margin-top: 22px;
+  color: #d8b56b;
+  font-style: normal;
+  font-size: 22px;
+}
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.breadcrumb {
+  background: #fffaf0;
+  border-bottom: 1px solid rgba(80, 61, 30, 0.1);
+}
+
+.breadcrumb .container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 54px;
+
+  font-size: 12px;
+}
+
+.breadcrumb a {
+  color: #5b6470;
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  color: #a18b62;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.introSection {
+  position: relative;
+  padding: 70px 0;
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(211, 180, 112, 0.12),
+      transparent 35%
+    ),
+    #faf6ed;
+}
+
+.introGrid {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 70px 1fr 400px;
+  gap: 30px;
+  align-items: center;
+}
+
+.crossIcon {
+  align-self: start;
+
+  color: #b38a42;
+  font-family: Georgia, serif;
+  font-size: 58px;
+  line-height: 1;
+}
+
+.sectionKicker {
+  margin-bottom: 10px;
+
+  color: #a27a36;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.introContent h2 {
+  margin: 0 0 15px;
+
+  color: #102b4b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.introContent p {
+  max-width: 720px;
+  margin: 0 0 9px;
+
+  color: #454c54;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.introButtons {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+
+  min-height: 50px;
+  padding: 0 22px;
+
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.primaryButton {
+  color: #fff;
+  background: #102b4b;
+  border: 1px solid #102b4b;
+}
+
+.primaryButton span {
+  font-size: 18px;
+}
+
+.primaryButton b,
+.secondaryButton b {
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.secondaryButton {
+  color: #25384f;
+  background: transparent;
+  border: 1px solid #a48b63;
+}
+
+.primaryButton:hover {
+  background: #1c426b;
+  transform: translateY(-3px);
+}
+
+.secondaryButton:hover {
+  background: #fff;
+  transform: translateY(-3px);
+}
+
+.introArt {
+  position: relative;
+  min-height: 270px;
+  overflow: hidden;
+}
+
+.introArt img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  opacity: 0.18;
+  filter: grayscale(1);
+}
+
+.artQuote {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #72572d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.35;
+  font-style: italic;
+  text-align: center;
+}
+
+.artQuote div {
+  margin-top: 18px;
+  color: #b58a3f;
+}
+
+/* =========================================================
+   ARCHIVE
+========================================================= */
+
+.archiveSection {
+  padding: 75px 0 90px;
+  background: #f8f3e8;
+}
+
+.archiveHeader {
+  display: grid;
+  grid-template-columns: auto 1fr 300px;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 42px;
+}
+
+.archiveHeader h2 {
+  margin: 0;
+
+  color: #102b4b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.archiveHeader h2 span {
+  color: #9b722e;
+}
+
+.archiveLine {
+  height: 1px;
+  margin-bottom: 13px;
+  background: #b99657;
+}
+
+.archiveHeader p {
+  margin: 0;
+
+  color: #5b5d60;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.magazineGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.magazineCard {
+  position: relative;
+
+  background: #fffdf8;
+  border: 1px solid rgba(104, 79, 38, 0.13);
+  border-radius: 6px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 30px rgba(43, 34, 21, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.magazineCard:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 22px 45px rgba(43, 34, 21, 0.16);
+}
+
+.magazineImageWrap {
+  position: relative;
+  height: 330px;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.magazineImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.magazineCard:hover .magazineImage {
+  transform: scale(1.06);
+}
+
+.magazineImageOverlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 25px 10px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 35, 65, 0.78),
+      rgba(7, 35, 65, 0.05) 55%,
+      rgba(7, 35, 65, 0.2)
+    );
+
+  color: #fff;
+  text-align: center;
+}
+
+.magazineImageOverlay span {
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.magazineImageOverlay strong {
+  margin-top: 12px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.magazineImageOverlay small {
+  margin-top: 5px;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.cardContent {
+  padding: 8px 12px 14px;
+  text-align: center;
+}
+
+.cardContent h3 {
+  margin: 0;
+
+  color: #102b4b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.issueMeta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin: 7px 0 14px;
+
+  color: #756d61;
+  font-size: 11px;
+}
+
+.issueMeta span {
+  color: #b89961;
+}
+
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.viewButton,
+.downloadButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 34px;
+
+  border-radius: 3px;
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.viewButton {
+  color: #20364f;
+  background: transparent;
+  border: 1px solid #bba57d;
+}
+
+.downloadButton {
+  color: #fff;
+  background: #102b4b;
+  border: 1px solid #102b4b;
+}
+
+.viewButton:hover {
+  background: #f4eee1;
+}
+
+.downloadButton:hover {
+  background: #b28a43;
+  border-color: #b28a43;
+}
+
+/* =========================================================
+   REQUEST SECTION
+========================================================= */
+
+.requestSection {
+  padding: 25px 0;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(171, 132, 64, 0.025) 0,
+      rgba(171, 132, 64, 0.025) 2px,
+      transparent 2px,
+      transparent 8px
+    ),
+    #f1e7d4;
+  border-top: 1px solid rgba(117, 85, 35, 0.1);
+  border-bottom: 1px solid rgba(117, 85, 35, 0.1);
+}
+
+.requestInner {
+  display: grid;
+  grid-template-columns: 75px 1fr auto;
+  align-items: center;
+  gap: 25px;
+}
+
+.mailCircle {
+  width: 66px;
+  height: 66px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #fff;
+  background: #b18642;
+
+  font-size: 25px;
+
+  box-shadow: 0 8px 20px rgba(83, 57, 20, 0.18);
+}
+
+.requestText h3 {
+  margin: 0 0 5px;
+
+  color: #102b4b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.requestText p {
+  margin: 0;
+  color: #5d5a55;
+  font-size: 14px;
+}
+
+.requestButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 15px 25px;
+
+  color: #fff;
+  background: #b18642;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.requestButton:hover {
+  background: #102b4b;
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   WORD SECTION
+========================================================= */
+
+.wordSection {
+  position: relative;
+  min-height: 285px;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+}
+
+.wordBackground {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  filter: brightness(0.7);
+}
+
+.wordOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 26, 47, 0.8),
+      rgba(8, 26, 47, 0.4),
+      rgba(8, 26, 47, 0.72)
+    );
+}
+
+.wordContent {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+  color: #fff;
+}
+
+.wordDecoration {
+  margin-bottom: 8px;
+  color: #d4ae61;
+  font-size: 18px;
+}
+
+.wordContent h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.wordLine {
+  width: 70px;
+  height: 1px;
+  margin: 17px auto;
+
+  background: #d4ae61;
+}
+
+.wordContent p {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.wordContent span {
+  display: block;
+  margin-top: 8px;
+
+  color: #d7bd83;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.finalSection {
+  padding: 65px 0;
+  background: #fbf7ee;
+}
+
+.finalInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding: 42px 50px;
+
+  background:
+    linear-gradient(
+      100deg,
+      #f3ead9,
+      #fffaf1
+    );
+
+  border: 1px solid rgba(132, 98, 45, 0.14);
+}
+
+.finalInner h2 {
+  margin: 0 0 10px;
+
+  color: #102b4b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.finalInner p {
+  max-width: 650px;
+  margin: 0;
+
+  color: #5c5b58;
+  line-height: 1.7;
+}
+
+.finalButton {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 16px 26px;
+
+  color: #fff;
+  background: #102b4b;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.finalButton:hover {
+  background: #b18642;
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .introGrid {
+    grid-template-columns: 55px 1fr;
+  }
+
+  .introArt {
+    display: none;
+  }
+
+  .magazineGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .archiveHeader {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .archiveLine {
+    display: none;
+  }
+
+  .heroSideText {
+    right: 4%;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 570px;
+  }
+
+  .heroContent {
+    padding-top: 50px;
+  }
+
+  .heroLine {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .heroLine span {
+    width: 25px;
+  }
+
+  .heroContent h1 {
+    font-size: 48px;
+  }
+
+  .heroTagline {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  .heroTagline span {
+    margin: 0 4px;
+  }
+
+  .heroQuote {
+    font-size: 17px;
+  }
+
+  .heroSideText {
+    display: none;
+  }
+
+  .breadcrumb .container {
+    min-height: 45px;
+  }
+
+  .introSection {
+    padding: 50px 0;
+  }
+
+  .introGrid {
+    display: block;
+  }
+
+  .crossIcon {
+    margin-bottom: 18px;
+    font-size: 45px;
+  }
+
+  .introContent h2 {
+    font-size: 29px;
+  }
+
+  .introContent p {
+    font-size: 14px;
+  }
+
+  .introButtons {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .archiveSection {
+    padding: 55px 0;
+  }
+
+  .archiveHeader h2 {
+    font-size: 38px;
+  }
+
+  .archiveHeader p {
+    font-size: 13px;
+  }
+
+  .magazineGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .magazineImageWrap {
+    height: 260px;
+  }
+
+  .magazineImageOverlay strong {
+    font-size: 18px;
+  }
+
+  .cardContent h3 {
+    font-size: 14px;
+  }
+
+  .viewButton,
+  .downloadButton {
+    font-size: 10px;
+  }
+
+  .requestInner {
+    grid-template-columns: 55px 1fr;
+    gap: 15px;
+  }
+
+  .mailCircle {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+
+  .requestText h3 {
+    font-size: 18px;
+  }
+
+  .requestText p {
+    font-size: 12px;
+  }
+
+  .requestButton {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+
+  .wordSection {
+    min-height: 250px;
+  }
+
+  .wordContent h2 {
+    font-size: 27px;
+  }
+
+  .wordContent p {
+    padding: 0 20px;
+    font-size: 15px;
+  }
+
+  .finalSection {
+    padding: 45px 0;
+  }
+
+  .finalInner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 25px;
+  }
+
+  .finalInner h2 {
+    font-size: 30px;
+  }
+
+  .finalButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 460px) {
+  .magazineGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .magazineImageWrap {
+    height: 390px;
+  }
+
+  .hero {
+    min-height: 540px;
+  }
+
+  .heroContent h1 {
+    font-size: 43px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .heroImage {
+    animation: none;
+  }
+
+  .magazineCard,
+  .magazineImage,
+  .primaryButton,
+  .secondaryButton,
+  .requestButton,
+  .finalButton {
+    transition: none;
+  }
+}

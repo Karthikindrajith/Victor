@@ -1,0 +1,1796 @@
+.page {
+  background: #fffdf8;
+  color: #102b49;
+  overflow: hidden;
+}
+
+.container {
+  width: min(1180px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+  position: relative;
+  min-height: 640px;
+  overflow: hidden;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+
+  background-image:
+    url("/images/church/velankanni-books-hero.png");
+
+  background-size: cover;
+  background-position: center;
+
+  animation: heroZoom 15s ease-in-out infinite alternate;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 252, 244, 0.98) 0%,
+      rgba(255, 252, 244, 0.94) 28%,
+      rgba(255, 252, 244, 0.72) 48%,
+      rgba(9, 30, 50, 0.2) 76%,
+      rgba(5, 23, 39, 0.48) 100%
+    );
+}
+
+
+/* =====================================================
+   MARY
+===================================================== */
+
+.maryWrap {
+  position: absolute;
+  right: 4%;
+  bottom: 0;
+
+  width: 410px;
+  height: 570px;
+
+  z-index: -1;
+}
+
+.maryImage {
+  width: 100%;
+  height: 100%;
+
+  background-image:
+    url("/images/church/mother-mary-books.png");
+
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  animation: maryFloat 6s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.heroContent {
+  width: 600px;
+
+  margin-left:
+    max(40px, calc((100vw - 1180px) / 2));
+
+  padding-top: 20px;
+
+  animation: heroReveal 1s ease both;
+}
+
+.heroKicker {
+  display: block;
+
+  color: #a87327;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 3.5px;
+}
+
+.heroContent h1 {
+  margin: 17px 0 0;
+
+  color: #102b49;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(76px, 8vw, 112px);
+
+  font-weight: 400;
+
+  line-height: 0.88;
+}
+
+.heroContent h1 em {
+  color: #aa7328;
+  font-weight: 400;
+}
+
+.heroContent p {
+  margin: 27px 0 0;
+
+  color: #3d566e;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 19px;
+
+  line-height: 1.55;
+}
+
+.heroDivider {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  width: 180px;
+
+  margin-top: 28px;
+}
+
+.heroDivider span {
+  height: 1px;
+
+  flex: 1;
+
+  background: #b47b2e;
+}
+
+.heroDivider i {
+  color: #b47b2e;
+
+  font-size: 13px;
+
+  font-style: normal;
+}
+
+.heroBottomText {
+  display: block;
+
+  margin-top: 16px;
+
+  color: #68798b;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   HERO QUOTE
+===================================================== */
+
+.heroQuote {
+  position: absolute;
+
+  right: 6%;
+  top: 45%;
+
+  width: 230px;
+
+  color: white;
+
+  text-align: center;
+
+  text-shadow:
+    0 3px 16px rgba(0, 0, 0, 0.55);
+
+  animation:
+    quoteReveal 1.2s ease 0.3s both;
+}
+
+.heroQuote > span {
+  display: block;
+
+  height: 30px;
+
+  color: #e5c57f;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 52px;
+
+  line-height: 35px;
+}
+
+.heroQuote p {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+
+  line-height: 1.45;
+}
+
+.heroQuote small {
+  display: block;
+
+  margin-top: 10px;
+
+  color: #ecd18e;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   SCROLL
+===================================================== */
+
+.scroll {
+  position: absolute;
+
+  bottom: 24px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 8px;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.scroll div {
+  width: 1px;
+  height: 32px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #e4c47f,
+      transparent
+    );
+
+  animation: scrollPulse 1.8s infinite;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+  padding: 95px 0 80px;
+
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(177, 128, 47, 0.07),
+      transparent 30%
+    );
+}
+
+.intro .container {
+  display: grid;
+
+  grid-template-columns: 180px 1fr;
+
+  gap: 70px;
+}
+
+.introNumber {
+  padding-top: 9px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.introNumber strong {
+  color: #a87327;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 50px;
+
+  font-weight: 400;
+}
+
+.introNumber span {
+  width: 40px;
+
+  height: 1px;
+
+  margin: 15px 0;
+
+  background: #a87327;
+}
+
+.introNumber small {
+  color: #718090;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.sectionKicker {
+  display: block;
+
+  color: #a87327;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.introContent h2 {
+  margin: 13px 0 22px;
+
+  color: #102b49;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(43px, 5vw, 62px);
+
+  font-weight: 400;
+
+  line-height: 1.02;
+}
+
+.introContent h2 em {
+  color: #a87327;
+
+  font-weight: 400;
+}
+
+.introContent p {
+  max-width: 690px;
+
+  margin: 0 0 8px;
+
+  color: #627385;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   BOOKS
+===================================================== */
+
+.booksSection {
+  padding: 80px 0 95px;
+
+  background: #f5f1e9;
+}
+
+.sectionHeading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 45px;
+}
+
+.sectionHeading h2 {
+  margin: 13px 0 0;
+
+  color: #102b49;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 55px;
+
+  font-weight: 400;
+}
+
+.sectionHeading h2 em {
+  color: #a87327;
+}
+
+.bookCount {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 8px;
+}
+
+.bookCount strong {
+  color: #a87327;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 43px;
+
+  font-weight: 400;
+}
+
+.bookCount span {
+  color: #718090;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.booksGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =====================================================
+   BOOK CARD
+===================================================== */
+
+.bookCard {
+  overflow: hidden;
+
+  background: #fff;
+
+  border:
+    1px solid rgba(16, 43, 73, 0.08);
+
+  box-shadow:
+    0 18px 45px rgba(20, 39, 57, 0.09);
+
+  animation:
+    cardReveal 0.8s ease both;
+
+  animation-delay: var(--delay);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.bookCard:hover {
+  transform: translateY(-9px);
+
+  box-shadow:
+    0 28px 60px rgba(20, 39, 57, 0.15);
+}
+
+.coverArea {
+  position: relative;
+
+  height: 350px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #dfe8ee,
+      #f3eadb
+    );
+}
+
+.coverGlow {
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(181, 133, 53, 0.22),
+      transparent 68%
+    );
+
+  filter: blur(10px);
+}
+
+.bookCover {
+  position: relative;
+
+  width: 190px;
+  height: 280px;
+
+  overflow: hidden;
+
+  border-radius:
+    2px 7px 7px 2px;
+
+  box-shadow:
+    8px 9px 0 rgba(18, 42, 66, 0.08),
+    17px 20px 30px rgba(0, 0, 0, 0.23);
+
+  transform:
+    perspective(900px)
+    rotateY(-5deg);
+
+  transition:
+    transform 0.55s ease;
+}
+
+.bookCard:hover .bookCover {
+  transform:
+    perspective(900px)
+    rotateY(0)
+    translateY(-7px);
+}
+
+.bookCover img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.7s ease;
+}
+
+.bookCard:hover .bookCover img {
+  transform: scale(1.07);
+}
+
+.coverOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(7, 28, 48, 0.05),
+      rgba(5, 25, 43, 0.75)
+    );
+}
+
+.coverText {
+  position: absolute;
+
+  left: 15px;
+  right: 15px;
+  bottom: 20px;
+
+  color: white;
+
+  text-align: center;
+
+  text-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.65);
+}
+
+.coverText small {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #efd08d;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.coverText strong {
+  display: block;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  line-height: 1.15;
+}
+
+.coverText span {
+  display: block;
+
+  margin-top: 10px;
+
+  font-size: 6px;
+
+  letter-spacing: 1.8px;
+}
+
+
+/* =====================================================
+   BOOK INFO
+===================================================== */
+
+.bookInfo {
+  padding: 28px 27px 30px;
+}
+
+.bookNumber {
+  color: #a87327;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+.bookInfo h3 {
+  min-height: 67px;
+
+  margin: 12px 0 0;
+
+  color: #102b49;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 24px;
+
+  font-weight: 400;
+
+  line-height: 1.18;
+}
+
+.goldLine {
+  width: 38px;
+  height: 2px;
+
+  margin: 15px 0;
+
+  background: #a87327;
+}
+
+.bookInfo p {
+  min-height: 45px;
+
+  margin: 0;
+
+  color: #687789;
+
+  font-size: 12px;
+
+  line-height: 1.65;
+}
+
+.enquireButton {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 20px;
+
+  padding: 12px 15px;
+
+  color: #102b49;
+
+  border:
+    1px solid rgba(16, 43, 73, 0.16);
+
+  text-decoration: none;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.enquireButton span {
+  font-size: 17px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.enquireButton:hover {
+  color: white;
+
+  background: #a87327;
+
+  border-color: #a87327;
+}
+
+.enquireButton:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =====================================================
+   CONTACT STRIP
+===================================================== */
+
+.contactStrip {
+  padding: 0 0 85px;
+
+  background: #f5f1e9;
+}
+
+.contactStripContent {
+  min-height: 115px;
+
+  padding: 23px 27px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  background:
+    linear-gradient(
+      105deg,
+      #e4eef5,
+      #f4f8fa
+    );
+
+  border-radius: 6px;
+}
+
+.contactIcon {
+  width: 57px;
+  height: 57px;
+
+  flex: 0 0 57px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: #a87327;
+
+  font-size: 22px;
+}
+
+.contactStripContent > div:nth-child(2) {
+  flex: 1;
+}
+
+.contactStripContent > div:nth-child(2) > span {
+  color: #a87327;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.contactStripContent h3 {
+  margin: 4px 0 0;
+
+  color: #173b5c;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 21px;
+
+  font-weight: 400;
+}
+
+.contactStripContent p {
+  margin: 4px 0 0;
+
+  color: #64778b;
+
+  font-size: 11px;
+}
+
+.contactButton {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  padding: 15px 19px;
+
+  color: white;
+
+  background: #0d4165;
+
+  text-decoration: none;
+
+  border-radius: 4px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.contactButton span {
+  font-size: 17px;
+}
+
+.contactButton:hover {
+  background: #a87327;
+
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   BANK
+===================================================== */
+
+.bankSection {
+  padding: 100px 0;
+
+  background: #fffdf8;
+}
+
+.bankGrid {
+  display: grid;
+
+  grid-template-columns:
+    0.85fr 1.15fr;
+
+  gap: 75px;
+
+  align-items: center;
+}
+
+.bankIntro h2 {
+  margin: 15px 0 22px;
+
+  color: #102b49;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 53px;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.bankIntro h2 em {
+  color: #a87327;
+
+  font-weight: 400;
+}
+
+.bankIntro p {
+  max-width: 460px;
+
+  margin: 0 0 10px;
+
+  color: #657689;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.bankCard {
+  padding: 32px 34px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f9f7f0,
+      #fff
+    );
+
+  border:
+    1px solid rgba(16, 43, 73, 0.1);
+
+  box-shadow:
+    0 20px 50px rgba(18, 39, 59, 0.08);
+}
+
+.cardTop {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-bottom: 17px;
+
+  margin-bottom: 2px;
+
+  border-bottom:
+    1px solid rgba(16, 43, 73, 0.1);
+}
+
+.cardTop span {
+  color: #a87327;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.cardTop i {
+  color: #a87327;
+
+  font-style: normal;
+}
+
+.bankRow {
+  padding: 15px 0;
+
+  border-bottom:
+    1px solid rgba(16, 43, 73, 0.07);
+}
+
+.bankRow:last-child {
+  border-bottom: 0;
+}
+
+.bankRow small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #8a96a3;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.bankRow strong {
+  color: #173c5d;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   ADDRESS
+===================================================== */
+
+.addressSection {
+  padding: 0 0 100px;
+
+  background: #fffdf8;
+}
+
+.addressGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 25px;
+}
+
+.addressCard {
+  padding: 37px;
+
+  background: #f5f1e9;
+
+  border:
+    1px solid rgba(16, 43, 73, 0.06);
+}
+
+.cardKicker {
+  color: #a87327;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+.addressCard h3 {
+  margin: 12px 0 0;
+
+  color: #102b49;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 29px;
+
+  font-weight: 400;
+}
+
+.cardLine {
+  width: 35px;
+  height: 2px;
+
+  margin: 17px 0;
+
+  background: #a87327;
+}
+
+.addressCard > p {
+  margin: 0;
+
+  color: #647486;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+.contactDetails p {
+  margin: 0 0 13px;
+
+  color: #52687b;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.contactDetails p:last-child {
+  margin-bottom: 0;
+}
+
+.contactDetails span {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #9a7a45;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   SPONSOR
+===================================================== */
+
+.sponsorSection {
+  position: relative;
+
+  min-height: 500px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+.sponsorBackground {
+  position: absolute;
+  inset: 0;
+
+  z-index: -2;
+
+  background-image:
+    url("/images/church/intro-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.sponsorOverlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 23, 40, 0.94),
+      rgba(5, 23, 40, 0.78),
+      rgba(5, 23, 40, 0.56)
+    );
+}
+
+.sponsorContent {
+  width: 620px;
+
+  padding: 80px 0;
+
+  color: white;
+}
+
+.sponsorKicker {
+  color: #e3c27c;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.sponsorContent h2 {
+  margin: 16px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 53px;
+
+  font-weight: 400;
+
+  line-height: 1.02;
+}
+
+.sponsorContent h2 em {
+  color: #e3c27c;
+
+  font-weight: 400;
+}
+
+.sponsorDivider {
+  width: 150px;
+
+  margin: 20px 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.sponsorDivider span {
+  flex: 1;
+
+  height: 1px;
+
+  background: #b98a47;
+}
+
+.sponsorDivider i {
+  color: #e3c27c;
+
+  font-style: normal;
+}
+
+.sponsorContent p {
+  max-width: 570px;
+
+  margin: 0 0 8px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.sponsorButton {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  margin-top: 22px;
+
+  padding: 15px 20px;
+
+  color: #112b48;
+
+  background: #e5c27c;
+
+  text-decoration: none;
+
+  border-radius: 3px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.sponsorButton span {
+  font-size: 18px;
+}
+
+.sponsorButton:hover {
+  background: white;
+
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.finalSection {
+  padding: 70px 0;
+
+  background: #fffdf8;
+}
+
+.finalContent {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.finalContent > div > span {
+  color: #a87327;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+.finalContent h2 {
+  margin: 12px 0 0;
+
+  color: #102b49;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 45px;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.finalContent h2 em {
+  color: #a87327;
+}
+
+.finalButton {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 16px 22px;
+
+  color: white;
+
+  background: #102b49;
+
+  text-decoration: none;
+
+  border-radius: 3px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.finalButton span {
+  font-size: 18px;
+}
+
+.finalButton:hover {
+  background: #a87327;
+
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes maryFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes quoteReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scaleY(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+  .container {
+    width:
+      min(900px, calc(100% - 50px));
+  }
+
+  .heroMary {
+    right: -5%;
+    width: 350px;
+  }
+
+  .heroQuote {
+    right: 2%;
+  }
+
+  .booksGrid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .bankGrid {
+    gap: 40px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+  .container {
+    width:
+      calc(100% - 36px);
+  }
+
+  /* HERO */
+
+  .hero {
+    min-height: 570px;
+    align-items: flex-start;
+  }
+
+  .heroBackground {
+    background-position: 62% center;
+  }
+
+  .heroOverlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 252, 244, 0.98) 0%,
+        rgba(255, 252, 244, 0.88) 40%,
+        rgba(7, 28, 47, 0.55) 100%
+      );
+  }
+
+  .heroContent {
+    width:
+      calc(100% - 36px);
+
+    margin:
+      90px 18px 0;
+  }
+
+  .heroKicker {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .heroContent h1 {
+    font-size: 65px;
+  }
+
+  .heroContent p {
+    font-size: 16px;
+  }
+
+  .maryWrap {
+    right: -75px;
+    bottom: -10px;
+
+    width: 275px;
+    height: 385px;
+  }
+
+  .heroQuote {
+    top: auto;
+    right: 10px;
+    bottom: 35px;
+
+    width: 150px;
+  }
+
+  .heroQuote p {
+    font-size: 12px;
+  }
+
+  .heroQuote > span {
+    font-size: 40px;
+  }
+
+  .scroll {
+    display: none;
+  }
+
+
+  /* INTRO */
+
+  .intro {
+    padding: 60px 0;
+  }
+
+  .intro .container {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .introNumber {
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 13px;
+  }
+
+  .introNumber strong {
+    font-size: 36px;
+  }
+
+  .introNumber span {
+    width: 30px;
+
+    margin: 0;
+  }
+
+  .introContent h2 {
+    font-size: 42px;
+  }
+
+
+  /* BOOKS */
+
+  .booksSection {
+    padding: 60px 0;
+  }
+
+  .sectionHeading {
+    align-items: flex-start;
+  }
+
+  .sectionHeading h2 {
+    font-size: 43px;
+  }
+
+  .bookCount strong {
+    font-size: 32px;
+  }
+
+  .booksGrid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* CONTACT */
+
+  .contactStrip {
+    padding-bottom: 60px;
+  }
+
+  .contactStripContent {
+    flex-wrap: wrap;
+
+    padding: 20px;
+  }
+
+  .contactStripContent > div:nth-child(2) {
+    width:
+      calc(100% - 80px);
+  }
+
+  .contactButton {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+
+  /* BANK */
+
+  .bankSection {
+    padding: 65px 0;
+  }
+
+  .bankGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bankIntro h2 {
+    font-size: 43px;
+  }
+
+  .bankCard {
+    padding: 25px 22px;
+  }
+
+
+  /* ADDRESS */
+
+  .addressSection {
+    padding-bottom: 65px;
+  }
+
+  .addressGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .addressCard {
+    padding: 28px;
+  }
+
+
+  /* SPONSOR */
+
+  .sponsorSection {
+    min-height: 560px;
+  }
+
+  .sponsorContent {
+    width: 100%;
+
+    padding: 65px 0;
+  }
+
+  .sponsorContent h2 {
+    font-size: 42px;
+  }
+
+
+  /* FINAL */
+
+  .finalSection {
+    padding: 55px 0;
+  }
+
+  .finalContent {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 28px;
+  }
+
+  .finalContent h2 {
+    font-size: 38px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 530px;
+  }
+
+  .heroContent {
+    margin-top: 75px;
+  }
+
+  .heroContent h1 {
+    font-size: 57px;
+  }
+
+  .heroContent p {
+    font-size: 14px;
+  }
+
+  .maryWrap {
+    right: -90px;
+
+    width: 245px;
+    height: 340px;
+  }
+
+  .heroQuote {
+    right: 4px;
+    bottom: 22px;
+  }
+
+  .coverArea {
+    height: 330px;
+  }
+
+  .bookCover {
+    width: 180px;
+    height: 265px;
+  }
+
+  .bookInfo h3 {
+    min-height: auto;
+
+    font-size: 26px;
+  }
+
+  .bookInfo p {
+    min-height: auto;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .heroBackground,
+  .maryImage,
+  .heroContent,
+  .heroQuote,
+  .scroll div,
+  .bookCard {
+    animation: none;
+  }
+
+  .bookCard,
+  .bookCover,
+  .bookCover img,
+  .enquireButton,
+  .contactButton,
+  .sponsorButton,
+  .finalButton {
+    transition: none;
+  }
+}

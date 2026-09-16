@@ -1,0 +1,1306 @@
+.page {
+  background: #f8f3e8;
+  color: #142b49;
+  overflow: hidden;
+}
+
+.container {
+  width: min(1380px, 92%);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+  min-height: 570px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  animation: heroZoom 14s ease-in-out infinite alternate;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(250, 247, 237, 0.96) 0%,
+      rgba(250, 247, 237, 0.87) 35%,
+      rgba(250, 247, 237, 0.35) 62%,
+      rgba(6, 29, 52, 0.12) 100%
+    );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+
+  width: min(1380px, 92%);
+  margin: 0 auto;
+
+  padding-top: 60px;
+
+  animation: fadeUp 1s ease both;
+}
+
+.heroKicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 18px;
+
+  color: #a77c35;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.heroKicker span {
+  width: 38px;
+  height: 1px;
+  background: #a77c35;
+}
+
+.heroContent h1 {
+  margin: 0;
+
+  color: #102b4b;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(60px, 7vw, 92px);
+  line-height: 0.95;
+  font-weight: 400;
+}
+
+.heroContent h1 strong {
+  color: #a47732;
+  font-weight: 400;
+}
+
+.heroContent h2 {
+  margin: 18px 0 13px;
+
+  color: #45586d;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.heroContent p {
+  max-width: 610px;
+
+  margin: 0;
+
+  color: #293b4e;
+
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.heroServices {
+  display: flex;
+  gap: 38px;
+
+  margin-top: 28px;
+}
+
+.heroService {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.heroIcon {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(163, 122, 51, 0.6);
+  border-radius: 50%;
+
+  color: #fff;
+  background: #ad813b;
+
+  font-size: 21px;
+
+  box-shadow:
+    0 8px 18px rgba(84, 58, 22, 0.16);
+
+  transition: 0.35s ease;
+}
+
+.heroService:hover .heroIcon {
+  transform: translateY(-5px) rotate(5deg);
+}
+
+.heroService strong,
+.heroService span {
+  display: block;
+}
+
+.heroService strong {
+  color: #19314c;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 16px;
+}
+
+.heroService span {
+  color: #6d6c68;
+  font-size: 12px;
+}
+
+.heroSideQuote {
+  position: absolute;
+  z-index: 3;
+
+  right: 6%;
+  top: 47%;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+
+  color: #fff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 24px;
+  line-height: 1.25;
+
+  font-style: italic;
+  text-align: center;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.35);
+
+  animation: floatQuote 4s ease-in-out infinite;
+}
+
+.heroSideQuote div {
+  margin-top: 20px;
+
+  color: #e0bb70;
+  font-style: normal;
+}
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.breadcrumb {
+  background: #fffaf0;
+
+  border-bottom:
+    1px solid rgba(80, 61, 30, 0.1);
+}
+
+.breadcrumb .container {
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 12px;
+}
+
+.breadcrumb a {
+  color: #5e6872;
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.breadcrumb a:hover {
+  color: #a77c35;
+}
+
+.breadcrumb span {
+  color: #ae8c58;
+}
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contactSection {
+  padding: 75px 0;
+
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(192, 156, 88, 0.08),
+      transparent 30%
+    ),
+    #faf6ed;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.95fr;
+
+  gap: 35px;
+
+  align-items: start;
+}
+
+.formWrapper {
+  padding: 8px 0;
+}
+
+.sectionKicker {
+  margin-bottom: 9px;
+
+  color: #a47732;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.formWrapper h2 {
+  margin: 0;
+
+  color: #102b4b;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 45px;
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+.formWrapper h2 strong {
+  color: #a47732;
+  font-weight: 400;
+}
+
+.formIntro {
+  margin: 13px 0 30px;
+
+  color: #5c6065;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.form {
+  width: 100%;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+
+  margin-bottom: 14px;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.inputGroup input,
+.inputGroup select,
+.messageGroup textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d9d2c5;
+  border-radius: 4px;
+
+  background: rgba(255, 253, 248, 0.85);
+
+  color: #1c334d;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.inputGroup input,
+.inputGroup select {
+  height: 58px;
+
+  padding:
+    0 18px 0 48px;
+}
+
+.inputGroup select {
+  appearance: auto;
+}
+
+.inputGroup input::placeholder,
+.messageGroup textarea::placeholder {
+  color: #777b80;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.messageGroup textarea:focus {
+  border-color: #ae8444;
+
+  box-shadow:
+    0 0 0 3px rgba(174, 132, 68, 0.09);
+}
+
+.inputIcon {
+  position: absolute;
+
+  left: 18px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #193553;
+
+  font-size: 18px;
+
+  pointer-events: none;
+}
+
+.messageGroup {
+  position: relative;
+
+  margin-bottom: 14px;
+}
+
+.messageGroup textarea {
+  min-height: 185px;
+
+  padding:
+    18px 18px 18px 48px;
+
+  resize: vertical;
+}
+
+.messageIcon {
+  position: absolute;
+
+  z-index: 2;
+
+  left: 18px;
+  top: 20px;
+
+  color: #193553;
+
+  font-size: 18px;
+}
+
+.submitButton {
+  width: 100%;
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  border: 1px solid #102b4b;
+  border-radius: 3px;
+
+  color: #fff;
+  background: #102b4b;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.submitButton span {
+  font-size: 18px;
+}
+
+.submitButton b {
+  margin-left: 7px;
+  font-size: 21px;
+}
+
+.submitButton:hover {
+  background: #b0833d;
+
+  border-color: #b0833d;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(72, 51, 22, 0.16);
+}
+
+.successMessage {
+  margin-top: 14px;
+
+  padding: 13px 16px;
+
+  border-left: 3px solid #b0833d;
+
+  color: #47604c;
+  background: #f2f6ee;
+
+  font-size: 13px;
+
+  animation: fadeUp 0.4s ease both;
+}
+
+/* =========================================================
+   CONTACT INFO CARD
+========================================================= */
+
+.infoCard {
+  position: relative;
+
+  padding: 28px;
+
+  background: #fffdf8;
+
+  border: 1px solid rgba(126, 96, 48, 0.15);
+  border-radius: 5px;
+
+  box-shadow:
+    0 12px 35px rgba(52, 43, 27, 0.07);
+
+  overflow: hidden;
+}
+
+.infoCard::after {
+  content: "";
+
+  position: absolute;
+
+  right: -80px;
+  top: 50px;
+
+  width: 250px;
+  height: 420px;
+
+  background:
+    url("/images/church/church-01.png")
+    center / contain
+    no-repeat;
+
+  opacity: 0.07;
+
+  pointer-events: none;
+}
+
+.infoHeader {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 18px;
+
+  border-bottom:
+    1px solid rgba(123, 93, 44, 0.12);
+}
+
+.infoHeader h2 {
+  margin: 0;
+
+  color: #102b4b;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.infoHeader span {
+  color: #ae8240;
+}
+
+.infoItem {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 17px;
+
+  margin-top: 22px;
+}
+
+.infoIcon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  color: #ae8240;
+
+  font-size: 18px;
+}
+
+.infoItem strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #19324e;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+}
+
+.infoItem p {
+  margin: 0;
+
+  color: #555c63;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.infoDivider {
+  height: 1px;
+
+  margin: 24px 0;
+
+  background:
+    rgba(123, 93, 44, 0.12);
+}
+
+.officeHours {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  gap: 17px;
+}
+
+.clockIcon {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  color: #ae8240;
+
+  font-size: 23px;
+}
+
+.officeHours h3 {
+  margin: 0 0 6px;
+
+  color: #19324e;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+}
+
+.officeHours strong {
+  display: block;
+
+  color: #374758;
+
+  font-size: 13px;
+}
+
+.officeHours p {
+  margin: 3px 0 0;
+
+  color: #5b6167;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.officeHours p span {
+  color: #85817a;
+}
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.location {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 25px;
+}
+
+.locationTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 12px;
+}
+
+.locationTitle h3 {
+  margin: 0;
+
+  color: #19324e;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 19px;
+}
+
+.locationTitle span {
+  color: #ae8240;
+}
+
+.mapBox {
+  position: relative;
+
+  height: 215px;
+
+  overflow: hidden;
+
+  border: 1px solid #d5cbb9;
+  border-radius: 4px;
+}
+
+.mapBox iframe {
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+
+  filter: saturate(0.85);
+}
+
+.mapButton {
+  position: absolute;
+
+  left: 12px;
+  bottom: 12px;
+
+  padding: 10px 15px;
+
+  color: #fff;
+  background: #102b4b;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.18);
+
+  transition: 0.3s ease;
+}
+
+.mapButton:hover {
+  background: #ae8240;
+}
+
+/* =========================================================
+   ENQUIRIES
+========================================================= */
+
+.enquirySection {
+  padding: 25px 0;
+
+  background: #f1e7d5;
+
+  border-top:
+    1px solid rgba(112, 83, 35, 0.1);
+
+  border-bottom:
+    1px solid rgba(112, 83, 35, 0.1);
+}
+
+.enquiryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.enquiryCard {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px 22px;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  border-right:
+    1px solid rgba(115, 85, 38, 0.17);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.enquiryCard:last-child {
+  border-right: none;
+}
+
+.enquiryCard:hover {
+  background: rgba(255, 255, 255, 0.38);
+
+  transform: translateY(-3px);
+}
+
+.enquiryIcon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #fff;
+  background: #ad813b;
+
+  font-size: 20px;
+}
+
+.enquiryCard h3 {
+  margin: 0 0 4px;
+
+  color: #19324e;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+}
+
+.enquiryCard p {
+  margin: 0;
+
+  color: #65625c;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PRAYER BANNER
+========================================================= */
+
+.prayerBanner {
+  position: relative;
+
+  min-height: 280px;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+}
+
+.prayerImage {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: brightness(0.68);
+}
+
+.prayerOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 27, 47, 0.75),
+      rgba(6, 27, 47, 0.35),
+      rgba(6, 27, 47, 0.72)
+    );
+}
+
+.prayerContent {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  color: #fff;
+
+  animation: fadeUp 1s ease both;
+}
+
+.prayerCross {
+  margin-bottom: 8px;
+
+  color: #d9b36a;
+
+  font-size: 18px;
+}
+
+.prayerContent h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 30px;
+  line-height: 1.4;
+
+  font-weight: 400;
+  font-style: italic;
+}
+
+.prayerContent span {
+  display: block;
+
+  margin-top: 10px;
+
+  color: #e2c17d;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.prayerLine {
+  width: 65px;
+  height: 1px;
+
+  margin: 16px auto 0;
+
+  background: #d9b36a;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.ctaSection {
+  padding: 65px 0;
+
+  background: #fbf7ee;
+}
+
+.ctaInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+
+  padding: 42px 50px;
+
+  background:
+    linear-gradient(
+      110deg,
+      #f2e8d5,
+      #fffaf2
+    );
+
+  border: 1px solid rgba(126, 96, 48, 0.14);
+}
+
+.ctaInner h2 {
+  margin: 0 0 10px;
+
+  color: #102b4b;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.ctaInner h2 strong {
+  color: #a47732;
+  font-weight: 400;
+}
+
+.ctaInner p {
+  max-width: 690px;
+
+  margin: 0;
+
+  color: #60605c;
+
+  line-height: 1.7;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 18px;
+
+  flex-shrink: 0;
+
+  padding: 16px 26px;
+
+  color: #fff;
+  background: #102b4b;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #ad813b;
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 25px rgba(65, 46, 20, 0.16);
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatQuote {
+  0%,
+  100% {
+    transform:
+      translateY(-50%)
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-50%)
+      translateY(-10px);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+  .heroSideQuote {
+    right: 3%;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .infoCard {
+    max-width: 750px;
+  }
+
+  .enquiryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .enquiryCard:nth-child(2) {
+    border-right: none;
+  }
+
+  .enquiryCard:nth-child(-n + 2) {
+    border-bottom:
+      1px solid rgba(115, 85, 38, 0.17);
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 600px;
+  }
+
+  .heroOverlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(250, 247, 237, 0.96),
+        rgba(250, 247, 237, 0.78) 52%,
+        rgba(8, 30, 51, 0.3)
+      );
+  }
+
+  .heroContent {
+    padding-top: 35px;
+  }
+
+  .heroKicker {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .heroKicker span {
+    width: 22px;
+  }
+
+  .heroContent h1 {
+    font-size: 55px;
+  }
+
+  .heroContent h2 {
+    font-size: 23px;
+  }
+
+  .heroContent p {
+    font-size: 14px;
+  }
+
+  .heroServices {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .heroIcon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .heroSideQuote {
+    display: none;
+  }
+
+  .contactSection {
+    padding: 50px 0;
+  }
+
+  .formWrapper h2 {
+    font-size: 35px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .infoCard {
+    padding: 22px;
+  }
+
+  .infoHeader h2 {
+    font-size: 21px;
+  }
+
+  .enquiryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .enquiryCard,
+  .enquiryCard:nth-child(2) {
+    border-right: none;
+    border-bottom:
+      1px solid rgba(115, 85, 38, 0.17);
+  }
+
+  .enquiryCard:last-child {
+    border-bottom: none;
+  }
+
+  .prayerBanner {
+    min-height: 270px;
+  }
+
+  .prayerContent h2 {
+    padding: 0 20px;
+    font-size: 22px;
+  }
+
+  .ctaSection {
+    padding: 45px 0;
+  }
+
+  .ctaInner {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 30px 25px;
+  }
+
+  .ctaInner h2 {
+    font-size: 29px;
+  }
+
+  .ctaButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+  .hero {
+    min-height: 570px;
+  }
+
+  .heroContent h1 {
+    font-size: 47px;
+  }
+
+  .heroContent h2 {
+    font-size: 20px;
+  }
+
+  .heroServices {
+    gap: 12px;
+  }
+
+  .heroService {
+    gap: 7px;
+  }
+
+  .heroIcon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .heroService strong {
+    font-size: 14px;
+  }
+
+  .heroService span {
+    font-size: 10px;
+  }
+
+  .formWrapper h2 {
+    font-size: 31px;
+  }
+
+  .mapBox {
+    height: 190px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .heroImage {
+    animation: none;
+  }
+
+  .heroSideQuote {
+    animation: none;
+  }
+
+  .heroIcon,
+  .submitButton,
+  .mapButton,
+  .ctaButton,
+  .enquiryCard {
+    transition: none;
+  }
+}
