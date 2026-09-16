@@ -1,0 +1,404 @@
+.page {
+  background: #f7f4ed;
+  color: #17283f;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: heroZoom 10s ease-in-out infinite alternate;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 20, 38, 0.9) 0%,
+      rgba(7, 20, 38, 0.65) 50%,
+      rgba(7, 20, 38, 0.78) 100%
+    );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  width: min(900px, 100%);
+  padding: 150px 25px 100px;
+  text-align: center;
+  color: #ffffff;
+  animation: fadeUp 1s ease both;
+}
+
+.category {
+  margin: 0 0 18px;
+  color: #d3b16b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.heroContent h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(46px, 7vw, 82px);
+  font-weight: 400;
+  line-height: 1.08;
+  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+.line {
+  width: 70px;
+  height: 2px;
+  margin: 28px auto;
+  background: #d1ae65;
+}
+
+.date {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   ARTICLE
+========================================= */
+
+.articleSection {
+  padding: 100px 20px 120px;
+  background: #f7f4ed;
+}
+
+.articleContainer {
+  width: min(900px, 100%);
+  margin: 0 auto;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 45px;
+  color: #8d703b;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.backLink:hover {
+  color: #17283f;
+  transform: translateX(-4px);
+}
+
+.article {
+  padding: 65px 75px;
+  background: #ffffff;
+  box-shadow: 0 25px 70px rgba(19, 32, 51, 0.08);
+  animation: fadeUp 1s ease both;
+}
+
+.articleCategory {
+  margin: 0 0 15px;
+  color: #a88648;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.article h2 {
+  margin: 0;
+  color: #17283f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.articleDate {
+  margin: 18px 0 0;
+  color: #999999;
+  font-size: 14px;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  margin: 30px 0;
+  background: #b9975b;
+}
+
+.content {
+  margin: 0 0 25px;
+  color: #656565;
+  font-size: 17px;
+  line-height: 2;
+}
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta {
+  position: relative;
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background-image: url("/images/church/intro-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 22, 40, 0.92),
+      rgba(8, 22, 40, 0.76)
+    );
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 90px 25px;
+  text-align: center;
+  color: #ffffff;
+  animation: fadeUp 1s ease both;
+}
+
+.ctaLabel {
+  margin: 0 0 18px;
+  color: #d2af68;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.ctaContent h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 5vw, 62px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 35px;
+  padding: 16px 28px;
+  background: #c2a05c;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #ffffff;
+  color: #17283f;
+  transform: translateY(-4px);
+}
+
+.ctaButton span {
+  font-size: 18px;
+}
+
+/* =========================================
+   NOT FOUND
+========================================= */
+
+.notFound {
+  min-height: 70vh;
+  padding: 180px 20px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #f7f4ed;
+}
+
+.notFound .label {
+  margin-bottom: 15px;
+  color: #a88648;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.notFound h1 {
+  margin: 0;
+  color: #17283f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 55px;
+  font-weight: 400;
+}
+
+.notFound > p:not(.label) {
+  margin: 20px 0 35px;
+  color: #777777;
+  font-size: 16px;
+}
+
+.backButton {
+  padding: 14px 25px;
+  background: #17283f;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: transform 0.3s ease;
+}
+
+.backButton:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: 540px;
+  }
+
+  .heroContent {
+    padding: 130px 25px 80px;
+  }
+
+  .articleSection {
+    padding: 75px 20px 90px;
+  }
+
+  .article {
+    padding: 50px 40px;
+  }
+
+  .cta {
+    min-height: 420px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 550px) {
+  .hero {
+    min-height: 500px;
+  }
+
+  .heroContent {
+    padding: 120px 20px 70px;
+  }
+
+  .category {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .heroContent h1 {
+    font-size: 44px;
+  }
+
+  .articleSection {
+    padding: 60px 15px 75px;
+  }
+
+  .backLink {
+    margin-bottom: 30px;
+  }
+
+  .article {
+    padding: 40px 25px;
+  }
+
+  .article h2 {
+    font-size: 38px;
+  }
+
+  .content {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .cta {
+    min-height: 400px;
+  }
+
+  .ctaContent {
+    padding: 70px 20px;
+  }
+
+  .ctaContent h2 {
+    font-size: 42px;
+  }
+
+  .notFound h1 {
+    font-size: 42px;
+  }
+}

@@ -1,122 +1,209 @@
-import Link from "next/link";
-import styles from "./TamilBlogDetail.module.css";
+"use client";
 
-type PageProps = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
+import Link from "next/link";
+import styles from "./TamilBlogs.module.css";
 
 const blogs = [
   {
+    id: 1,
     slug: "mother-marys-message",
     category: "MARY",
     title: "Mother Mary's Message",
     date: "September 16, 2026",
     image: "/images/church/faith-01.jpg",
-    content:
-      "Mother Mary continues to inspire devotees through her message of faith, hope, prayer and love.",
+    excerpt:
+      "A reflection on Mother Mary's message of faith, prayer, hope and love.",
   },
   {
+    id: 2,
     slug: "our-lady-of-good-health",
     category: "MARY",
     title: "Our Lady of Good Health",
-    date: "September 10, 2026",
+    date: "September 12, 2026",
     image: "/images/church/faith-02.jpg",
-    content:
-      "Our Lady of Good Health at Velankanni is a place of prayer, devotion and spiritual reflection for pilgrims.",
+    excerpt:
+      "Discover the devotion and spiritual significance of Our Lady of Good Health.",
   },
   {
+    id: 3,
     slug: "feast-of-velankanni",
     category: "FAITH",
     title: "The Feast of Velankanni",
-    date: "September 5, 2026",
+    date: "September 8, 2026",
     image: "/images/church/faith-03.jpg",
-    content:
-      "The annual feast brings together devotees and pilgrims in prayer and celebration at the Basilica.",
+    excerpt:
+      "A special reflection on prayer, devotion and the annual celebration at Velankanni.",
+  },
+  {
+    id: 4,
+    slug: "power-of-prayer",
+    category: "PRAYER",
+    title: "The Power of Prayer",
+    date: "September 2, 2026",
+    image: "/images/church/faith-04.jpg",
+    excerpt:
+      "Prayer brings us closer to God and gives strength during every moment of life.",
+  },
+  {
+    id: 5,
+    slug: "walking-in-faith",
+    category: "FAITH",
+    title: "Walking in Faith",
+    date: "August 25, 2026",
+    image: "/images/church/faith-05.jpg",
+    excerpt:
+      "A simple reflection on trusting God and walking forward with faith.",
+  },
+  {
+    id: 6,
+    slug: "hope-in-times-of-difficulty",
+    category: "HOPE",
+    title: "Hope in Times of Difficulty",
+    date: "August 18, 2026",
+    image: "/images/church/faith-06.jpg",
+    excerpt:
+      "Finding hope, peace and courage through prayer during difficult moments.",
+  },
+  {
+    id: 7,
+    slug: "life-of-a-saint",
+    category: "SAINTS",
+    title: "The Life of a Saint",
+    date: "August 10, 2026",
+    image: "/images/church/faith-07.jpg",
+    excerpt:
+      "Learning from the lives of saints and their examples of faith and devotion.",
+  },
+  {
+    id: 8,
+    slug: "mary-mother-of-hope",
+    category: "MARY",
+    title: "Mary, Mother of Hope",
+    date: "August 3, 2026",
+    image: "/images/church/faith-08.jpg",
+    excerpt:
+      "A devotional reflection on Mary as a mother of hope and comfort.",
   },
 ];
 
-export default async function TamilBlogDetailPage({
-  params,
-}: PageProps) {
-  const { slug } = await params;
-
-  const blog = blogs.find((item) => item.slug === slug);
-
-  if (!blog) {
-    return (
-      <main className={styles.notFound}>
-        <p className={styles.label}>TAMIL BLOG</p>
-
-        <h1>Blog Not Found</h1>
-
-        <p>
-          The requested Tamil blog could not be found.
-        </p>
-
-        <Link href="/tamil/blogs" className={styles.backButton}>
-          ← BACK TO TAMIL BLOGS
-        </Link>
-      </main>
-    );
-  }
-
+export default function TamilBlogsPage() {
   return (
     <main className={styles.page}>
       {/* HERO */}
 
       <section className={styles.hero}>
-        <img
-          src={blog.image}
-          alt={blog.title}
-          className={styles.heroImage}
-        />
-
         <div className={styles.heroOverlay} />
 
         <div className={styles.heroContent}>
-          <p className={styles.category}>{blog.category}</p>
+          <p className={styles.eyebrow}>TAMIL BLOG</p>
 
-          <h1>{blog.title}</h1>
+          <h1>Stories of Faith</h1>
 
-          <div className={styles.line} />
+          <div className={styles.goldLine} />
 
-          <p className={styles.date}>{blog.date}</p>
+          <p>
+            Reflections, devotion, prayer and stories from
+            Velankanni.
+          </p>
         </div>
       </section>
 
-      {/* ARTICLE */}
+      {/* INTRO */}
 
-      <section className={styles.articleSection}>
-        <div className={styles.articleContainer}>
-          <Link href="/tamil/blogs" className={styles.backLink}>
-            ← BACK TO TAMIL BLOGS
-          </Link>
+      <section className={styles.intro}>
+        <div className={styles.container}>
+          <div className={styles.introHeader}>
+            <div>
+              <p className={styles.sectionLabel}>
+                LATEST STORIES
+              </p>
 
-          <article className={styles.article}>
-            <p className={styles.articleCategory}>
-              {blog.category}
+              <h2>
+                Faith &amp; <span>Devotion</span>
+              </h2>
+            </div>
+
+            <p className={styles.introText}>
+              Explore our Tamil blog articles covering faith,
+              prayer, devotion, Mother Mary and spiritual
+              reflections.
             </p>
+          </div>
 
-            <h2>{blog.title}</h2>
+          {/* BLOG GRID */}
 
-            <p className={styles.articleDate}>
-              {blog.date}
-            </p>
+          <div className={styles.blogGrid}>
+            {blogs.map((blog) => (
+              <article
+                key={blog.id}
+                className={styles.card}
+              >
+                <Link
+                  href={`/tamil/tamil-blogs/${blog.slug}`}
+                  className={styles.imageLink}
+                >
+                  <div className={styles.imageWrapper}>
+                    <img
+                      src={blog.image}
+                      alt={blog.title}
+                      className={styles.cardImage}
+                    />
 
-            <div className={styles.divider} />
+                    <span className={styles.category}>
+                      {blog.category}
+                    </span>
 
-            <p className={styles.content}>
-              {blog.content}
-            </p>
+                    <div className={styles.imageArrow}>
+                      →
+                    </div>
+                  </div>
+                </Link>
 
-            <p className={styles.content}>
-              This space can be used for the complete Tamil blog
-              article. The full article content, images and other
-              information can be added here when the blog is prepared.
-            </p>
-          </article>
+                <div className={styles.cardContent}>
+                  <p className={styles.date}>
+                    {blog.date}
+                  </p>
+
+                  <h3>
+                    <Link
+                      href={`/tamil/tamil-blogs/${blog.slug}`}
+                    >
+                      {blog.title}
+                    </Link>
+                  </h3>
+
+                  <p className={styles.excerpt}>
+                    {blog.excerpt}
+                  </p>
+
+                  <Link
+                    href={`/tamil/tamil-blogs/${blog.slug}`}
+                    className={styles.readMore}
+                  >
+                    READ MORE
+                    <span>→</span>
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* QUOTE */}
+
+      <section className={styles.quote}>
+        <div className={styles.quoteOverlay} />
+
+        <div className={styles.quoteContent}>
+          <div className={styles.quoteMark}>“</div>
+
+          <p>
+            Let faith guide your heart, prayer strengthen your
+            soul, and hope lead your journey.
+          </p>
+
+          <span>— VELANKANNI</span>
         </div>
       </section>
 
@@ -124,16 +211,27 @@ export default async function TamilBlogDetailPage({
 
       <section className={styles.cta}>
         <div className={styles.ctaContent}>
-          <p className={styles.ctaLabel}>VELANKANNI</p>
+          <p className={styles.sectionLabel}>
+            OUR SPIRITUAL JOURNEY
+          </p>
 
           <h2>
-            Stories of Faith,
+            Read. Reflect.
             <br />
-            Hope &amp; Devotion
+            Pray.
           </h2>
 
-          <Link href="/tamil/blogs" className={styles.ctaButton}>
-            EXPLORE MORE BLOGS <span>→</span>
+          <p>
+            Continue exploring stories of faith and devotion
+            from Velankanni.
+          </p>
+
+          <Link
+            href="/tamil"
+            className={styles.ctaButton}
+          >
+            BACK TO TAMIL HOME
+            <span>→</span>
           </Link>
         </div>
       </section>
