@@ -29,7 +29,7 @@ export default function ChurchIntro() {
 
           {/* Floating Badge */}
           <div className={styles.badge}>
-            <span>VELANKANNI</span>
+            <span>APOSTLES OF MARY</span>
             <small>A PLACE OF FAITH &amp; HOPE</small>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function ChurchIntro() {
           <div className={styles.separator}></div>
 
           <p className={styles.text}>
-            The Basilica of Our Lady of Good Health at Velankanni is one
+            The Basilica of Our Lady of Good Health  is one
             of the most beloved Marian pilgrimage centres in India.
             For generations, countless pilgrims have come here in
             faith, prayer and hope, seeking the loving intercession
@@ -57,7 +57,7 @@ export default function ChurchIntro() {
 
           <p className={styles.text}>
             Known with affection as the “Lourdes of the East”,
-            Velankanni welcomes pilgrims and visitors from across
+             welcomes pilgrims and visitors from across
             India and around the world.
           </p>
 

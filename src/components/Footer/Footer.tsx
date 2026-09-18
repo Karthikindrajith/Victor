@@ -27,7 +27,7 @@ export default function Footer() {
             <Link href="/" className={styles.logoLink}>
               <Image
                 src="/images/logo/velankanni-logo.png"
-                alt="Velankanni Shrine Basilica"
+                alt="Apostles of Mary"
                 width={150}
                 height={150}
                 className={styles.logo}
@@ -45,7 +45,7 @@ export default function Footer() {
             </h2>
 
             <div className={styles.location}>
-              VELANKANNI
+             Tuticon
             </div>
 
             <div className={styles.brandLine}></div>
@@ -321,9 +321,9 @@ export default function Footer() {
               </div>
 
               <p>
-                Velankanni,
+                Society of Apostles of Mary
                 <br />
-                Nagapattinam District,
+                Tuticon
                 <br />
                 Tamil Nadu – 611 111,
                 <br />
@@ -510,7 +510,7 @@ export default function Footer() {
               Experience Peace.
               <br className={styles.mobileBreak} />
               {" "}
-              Experience Velankanni.
+              Experience of Apostles of Mary.
             </h3>
 
           </div>
@@ -562,8 +562,7 @@ export default function Footer() {
           <div className={styles.copyrightText}>
 
             <p>
-              © {new Date().getFullYear()} Basilica of Our Lady
-              of Good Health, Velankanni.
+              © {new Date().getFullYear()} Society Of Apostles Of Mary.
             </p>
 
             <span>

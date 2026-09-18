@@ -64,7 +64,7 @@ export default function MassPrayer() {
       <div className={styles.background}>
         <img
           src="/images/church/mass-prayer.png"
-          alt=""
+          alt="Society of Apostles of Mary"
           aria-hidden="true"
         />
       </div>
@@ -80,7 +80,7 @@ export default function MassPrayer() {
 
         <div className={styles.content}>
           <p className={styles.overline}>
-            MASS &amp; PRAYER
+            SOCIETY OF APOSTLES OF MARY
           </p>
 
           <h2>
@@ -93,7 +93,7 @@ export default function MassPrayer() {
           </div>
 
           <p className={styles.description}>
-            At Velankanni, every prayer becomes a moment of
+             every prayer becomes a moment of
             grace. Join pilgrims and devotees in prayer,
             worship and the loving presence of our Lord.
           </p>

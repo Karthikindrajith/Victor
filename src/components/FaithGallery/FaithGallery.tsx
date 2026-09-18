@@ -15,7 +15,7 @@ const galleryItems = [
   },
   {
     image: "/images/church/faith-03.png",
-    title: "Pilgrims at Velankanni",
+    title: "Pilgrims at Mary",
     subtitle: "Journey of Faith",
   },
   {
@@ -41,7 +41,7 @@ const galleryItems = [
   {
     image: "/images/church/faith-08.png",
     title: "A Place of Hope",
-    subtitle: "Velankanni",
+    subtitle: "Goodness",
   },
 ];
 
@@ -127,11 +127,11 @@ export default function FaithGallery() {
         <p>
           A journey of faith, prayer and devotion
           <br />
-          that brings pilgrims together at Velankanni.
+          that brings pilgrims together at Good.
         </p>
 
         <a href="#about" className={styles.exploreLink}>
-          <span>EXPLORE VELANKANNI</span>
+          <span>EXPLORE Society of Apostles of Mary</span>
           <b>→</b>
         </a>
       </div>

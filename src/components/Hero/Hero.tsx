@@ -11,7 +11,7 @@ const slides = [
     title: "Our Lady of",
     highlight: "Good Health",
     description:
-      "For generations, millions have come to Velankanni seeking hope, healing and peace. Experience the everlasting love of Mother Mary.",
+      "For generations, millions have come to  seeking hope, healing and peace. Experience the everlasting love of Mother Mary.",
   },
 
   {
@@ -29,12 +29,12 @@ const slides = [
     title: "Walk With",
     highlight: "Mother Mary",
     description:
-      "Discover the beauty of prayer and the timeless devotion that brings millions of pilgrims to Velankanni.",
+      "Discover the beauty of prayer and the timeless devotion that brings millions of pilgrims.",
   },
 
   {
     image: "/images/church/hero-04.png",
-    eyebrow: "VELANKANNI • INDIA",
+    eyebrow: "SOCIETY OF APOSTLES OF MARY• INDIA",
     title: "A Place For",
     highlight: "All Nations",
     description:

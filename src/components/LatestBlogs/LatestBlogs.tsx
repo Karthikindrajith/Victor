@@ -17,7 +17,7 @@ const blogs: Blog[] = [
     id: 1,
     category: "CHURCH NEWS",
     date: "12 SEP 2026",
-    title: "Feast Preparations Begin at Velankanni",
+    title: "Feast Preparations Begin at Tuticon",
     description:
       "The parish community comes together in prayer, service and unity as we prepare for the annual feast celebrations.",
     image: "/images/church/hero-01.png",
@@ -35,7 +35,7 @@ const blogs: Blog[] = [
     id: 3,
     category: "COMMUNITY",
     date: "05 SEP 2026",
-    title: "Youth in Service at Velankanni",
+    title: "Youth in Service at Tuticon",
     description:
       "Our parish youth come together in service, spreading faith, hope and love through meaningful acts of charity.",
     image: "/images/church/faith-06.png",
@@ -106,7 +106,7 @@ export default function LatestBlogs() {
           <p className={styles.subtitle}>
             Stay informed with the latest church news, spiritual articles
             <br />
-            and updates from Velankanni.
+            and updates from Society of Apostles of Mary.
           </p>
         </header>
 
@@ -207,7 +207,7 @@ export default function LatestBlogs() {
         ========================================= */}
 
         <div className={styles.bottomLeft}>
-          <strong>VELANKANNI</strong>
+          <strong>SOCIETY OF APOSTLES OF MARY</strong>
 
           <span>
             OUR FAITH&nbsp;&nbsp; | &nbsp;&nbsp;OUR PEOPLE&nbsp;&nbsp; |

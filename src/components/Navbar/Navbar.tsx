@@ -23,9 +23,12 @@ export default function Navbar() {
       {/* =====================================================
           TOP BAR
       ===================================================== */}
+
+
       <div className={styles.topBar}>
         <div className={styles.topLeft}>
-          OUR LADY OF GOOD HEALTH • VELANKANNI
+          OUR LADY OF GOOD HEALTH • Society of Apostles of Mary
+
         </div>
 
         <div className={styles.topRight}>
@@ -69,9 +72,14 @@ export default function Navbar() {
           aria-label="Velankanni Home"
         >
           <img
-            src="/images/logo/velankanni-logo.png"
-            alt="Velankanni Basilica"
+            src="/images/logo/logo.png"
+            alt="Society of Apostles of Mary Logo"
           />
+
+          <div className={styles.logoText}>
+    <span>OUR LADY OF GOOD HEALTH</span>
+    <small></small>
+  </div>
         </Link>
 
 

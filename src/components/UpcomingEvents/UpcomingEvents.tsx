@@ -89,7 +89,7 @@ export default function UpcomingEvents() {
 
         <p className={styles.intro}>
           Join us for special celebrations, feast days and parish events
-          at Velankanni.
+        
           <br />
           Let us come together in prayer, faith and community.
         </p>
@@ -197,7 +197,7 @@ export default function UpcomingEvents() {
 
       {/* Bottom Decoration */}
       <div className={styles.bottomLeft}>
-        <span>VELANKANNI</span>
+        <span>SOCIETY OF APOSTLES OF MARY</span>
         <span>OUR MOTHER</span>
         <span>OUR HOPE</span>
       </div>

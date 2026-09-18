@@ -106,7 +106,6 @@
   content: "";
 
   position: absolute;
-
   left: 0;
   bottom: -4px;
 
@@ -215,20 +214,25 @@
 ========================================================= */
 
 .logo {
-  width: 300px;
+  width: 150px;
+  min-height: 95px;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   flex-shrink: 0;
 
   position: relative;
   z-index: 5;
+
+  text-decoration: none;
 }
 
 .logo img {
-  width: 265px;
-  height: auto;
+  width: 62px;
+  height: 62px;
 
   display: block;
 
@@ -242,6 +246,56 @@
   transition:
     transform 0.4s ease,
     filter 0.4s ease;
+}
+
+.logoText {
+  margin-top: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  line-height: 1.15;
+}
+
+.logoText span {
+  color: #ffffff;
+
+  font-family:
+    "Outfit",
+    sans-serif;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 1.3px;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.logoText small {
+  margin-top: 2px;
+
+  color: #d5b76a;
+
+  font-family:
+    "Outfit",
+    sans-serif;
+
+  font-size: 7px;
+  font-weight: 500;
+
+  letter-spacing: 2.5px;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .logo:hover img {
@@ -262,12 +316,17 @@
 
 .menu {
   height: 100%;
+
   display: flex;
   align-items: center;
+
   gap: 30px;
+
   margin-left: auto;
   margin-right: 5px;
-  transform: translateX(50px);
+
+  transform:
+    translateX(50px);
 }
 
 
@@ -296,6 +355,7 @@
   font-weight: 500;
 
   white-space: nowrap;
+
   text-decoration: none;
 
   cursor: pointer;
@@ -324,6 +384,7 @@
 
   left: 0;
   right: 0;
+
   bottom: 27px;
 
   height: 2px;
@@ -393,9 +454,6 @@
 
 /* =========================================================
    DESKTOP DROPDOWN
-   Used for:
-   BOOKS
-   TAMIL
 ========================================================= */
 
 .dropdown {
@@ -575,6 +633,7 @@
   letter-spacing: 0.2px;
 
   text-decoration: none;
+
   white-space: nowrap;
 
   position: relative;
@@ -958,6 +1017,7 @@
 ========================================================= */
 
 @media (max-width: 1250px) {
+
   .menu {
     gap: 20px;
 
@@ -965,11 +1025,23 @@
   }
 
   .logo {
-    width: 230px;
+    width: 135px;
+    min-height: 90px;
   }
 
   .logo img {
-    width: 210px;
+    width: 58px;
+    height: 58px;
+  }
+
+  .logoText span {
+    font-size: 7px;
+    letter-spacing: 1.1px;
+  }
+
+  .logoText small {
+    font-size: 6px;
+    letter-spacing: 2px;
   }
 
   .menuItem {
@@ -991,6 +1063,7 @@
 ========================================================= */
 
 @media (max-width: 1050px) {
+
   .menu {
     gap: 15px;
 
@@ -1002,11 +1075,23 @@
   }
 
   .logo {
-    width: 200px;
+    width: 115px;
+    min-height: 85px;
   }
 
   .logo img {
-    width: 185px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .logoText span {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+
+  .logoText small {
+    font-size: 5.5px;
+    letter-spacing: 1.8px;
   }
 
   .visitButton {
@@ -1032,6 +1117,7 @@
 ========================================================= */
 
 @media (max-width: 850px) {
+
   .topRight {
     display: none;
   }
@@ -1063,11 +1149,23 @@
   }
 
   .logo {
-    width: 210px;
+    width: 115px;
+    min-height: 82px;
   }
 
   .logo img {
-    width: 190px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .logoText span {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+
+  .logoText small {
+    font-size: 5.5px;
+    letter-spacing: 1.8px;
   }
 
   .mobileMenu {
@@ -1081,6 +1179,7 @@
 ========================================================= */
 
 @media (max-width: 480px) {
+
   .topLeft {
     font-size: 7px;
 
@@ -1092,11 +1191,27 @@
   }
 
   .logo {
-    width: 185px;
+    width: 105px;
+    min-height: 75px;
   }
 
   .logo img {
-    width: 170px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .logoText {
+    margin-top: 3px;
+  }
+
+  .logoText span {
+    font-size: 5.5px;
+    letter-spacing: 0.8px;
+  }
+
+  .logoText small {
+    font-size: 5px;
+    letter-spacing: 1.5px;
   }
 
   .mobileButton {
@@ -1121,6 +1236,7 @@
 ========================================================= */
 
 @media (max-width: 360px) {
+
   .topLeft {
     font-size: 6.5px;
 
@@ -1128,11 +1244,27 @@
   }
 
   .logo {
-    width: 165px;
+    width: 95px;
+    min-height: 70px;
   }
 
   .logo img {
-    width: 150px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .logoText {
+    margin-top: 2px;
+  }
+
+  .logoText span {
+    font-size: 5px;
+    letter-spacing: 0.7px;
+  }
+
+  .logoText small {
+    font-size: 4.5px;
+    letter-spacing: 1.3px;
   }
 
   .mobileButton {
@@ -1153,10 +1285,12 @@
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+
   .header,
   .header *,
   .header *::before,
   .header *::after {
+
     animation-duration: 0.01ms !important;
 
     animation-iteration-count: 1 !important;
