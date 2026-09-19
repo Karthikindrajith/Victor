@@ -116,7 +116,6 @@ export default function ChurchConstructionPage() {
 
       <Navbar />
 
-
       {/* =====================================================
           HERO
       ===================================================== */}
@@ -125,7 +124,7 @@ export default function ChurchConstructionPage() {
 
         <Image
           src="/images/church/church-construction-hero.png"
-          alt="Church of Our Lady construction"
+          alt="Society of Apostles of Mary Church Construction"
           fill
           priority
           className={styles.heroImage}
@@ -139,7 +138,7 @@ export default function ChurchConstructionPage() {
         <div className={styles.heroContent}>
 
           <div className={styles.eyebrow}>
-            VELANKANNI • INDIA
+            SOCIETY OF APOSTLES OF MARY • INDIA
           </div>
 
           <h1>
@@ -174,7 +173,6 @@ export default function ChurchConstructionPage() {
 
         </div>
 
-
         {/* SIDE IMAGE */}
 
         <div className={styles.heroSideImage}>
@@ -188,7 +186,6 @@ export default function ChurchConstructionPage() {
           />
 
         </div>
-
 
         {/* HERO STATS */}
 
@@ -212,7 +209,6 @@ export default function ChurchConstructionPage() {
         </div>
 
       </section>
-
 
       {/* =====================================================
           CONSTRUCTION APPEAL
@@ -238,30 +234,28 @@ export default function ChurchConstructionPage() {
 
           </div>
 
-
           <div className={styles.appealGrid}>
 
             <div className={styles.appealText}>
 
               <p>
-                The Church of Our Lady, the Victorious Queen of the
-                Universe, is under construction for more than seven
-                years now.
+                The Society of Apostles of Mary is undertaking
+                the construction of a sacred house of prayer
+                dedicated to faith, devotion and service.
               </p>
 
               <p>
-                We have been building this magnificent church with
-                the help of our loving benefactors, with the intention
-                of making reparation for the sins committed against
-                the Sacred Heart of Jesus (in the Blessed Sacrament
-                of the Altar) and for those committed against the
-                Immaculate Heart of Mary, as requested by Herself
-                at Fatima.
+                We have been building this magnificent church
+                with the help of our loving benefactors, with
+                the intention of creating a place where people
+                can come together in prayer, worship and
+                spiritual renewal.
               </p>
 
               <p>
-                Due to lack of sufficient funds, the building work
-                of Our Blessed Mother&apos;s church has been delayed.
+                Due to lack of sufficient funds, the building
+                work has been delayed and continued support is
+                needed to complete this sacred project.
               </p>
 
               <p>
@@ -270,7 +264,6 @@ export default function ChurchConstructionPage() {
                 needs the following materials for its completion.
               </p>
 
-
               <div className={styles.quote}>
 
                 <span className={styles.quoteMark}>
@@ -278,15 +271,14 @@ export default function ChurchConstructionPage() {
                 </span>
 
                 <p>
-                  To complete the request we the children of Mother
-                  Mary to pray specifically and your generous
-                  contribution.
+                  To complete this sacred mission, we invite
+                  everyone to pray and contribute generously
+                  according to their ability.
                 </p>
 
               </div>
 
             </div>
-
 
             {/* MARY IMAGE */}
 
@@ -294,7 +286,7 @@ export default function ChurchConstructionPage() {
 
               <Image
                 src="/images/church/mother-mary-construction.png"
-                alt="Our Blessed Mother Mary"
+                alt="Mother Mary"
                 fill
                 className={styles.maryImage}
                 sizes="(max-width: 900px) 100vw, 50vw"
@@ -302,11 +294,11 @@ export default function ChurchConstructionPage() {
 
               <div className={styles.imageCaption}>
                 <span>
-                  OUR BLESSED MOTHER
+                  SOCIETY OF APOSTLES OF MARY
                 </span>
 
                 <strong>
-                  Queen of the Universe
+                  Faith • Service • Hope
                 </strong>
               </div>
 
@@ -317,7 +309,6 @@ export default function ChurchConstructionPage() {
         </div>
 
       </section>
-
 
       {/* =====================================================
           ONE CRORE HIGHLIGHT
@@ -336,7 +327,7 @@ export default function ChurchConstructionPage() {
               </span>
 
               <h2>
-                A Magnificent Church
+                A Sacred House
                 <br />
                 <em>Awaiting Completion</em>
               </h2>
@@ -345,8 +336,8 @@ export default function ChurchConstructionPage() {
                 The total estimated requirement for completing
                 the church is
                 <strong> ₹1,00,00,000</strong>.
-                Every contribution helps bring this sacred dream
-                closer to completion.
+                Every contribution helps bring this sacred
+                project closer to completion.
               </p>
 
               <Link
@@ -358,7 +349,6 @@ export default function ChurchConstructionPage() {
               </Link>
 
             </div>
-
 
             <div className={styles.amountCard}>
 
@@ -378,7 +368,7 @@ export default function ChurchConstructionPage() {
 
               <p>
                 Help us complete this magnificent
-                church dedicated to Our Blessed Mother.
+                house of prayer through your support.
               </p>
 
             </div>
@@ -388,7 +378,6 @@ export default function ChurchConstructionPage() {
         </div>
 
       </section>
-
 
       {/* =====================================================
           REQUIREMENTS
@@ -416,7 +405,6 @@ export default function ChurchConstructionPage() {
 
           </div>
 
-
           <div className={styles.requirementsTable}>
 
             <div className={styles.tableHeader}>
@@ -434,7 +422,6 @@ export default function ChurchConstructionPage() {
               </span>
 
             </div>
-
 
             {requirements.map((item) => (
               <div
@@ -465,7 +452,6 @@ export default function ChurchConstructionPage() {
               </div>
             ))}
 
-
             <div className={styles.totalRow}>
 
               <span>
@@ -483,7 +469,6 @@ export default function ChurchConstructionPage() {
         </div>
 
       </section>
-
 
       {/* =====================================================
           PRAYER BANNER
@@ -523,7 +508,6 @@ export default function ChurchConstructionPage() {
 
       </section>
 
-
       {/* =====================================================
           DONATION
       ===================================================== */}
@@ -553,7 +537,6 @@ export default function ChurchConstructionPage() {
 
           </div>
 
-
           <div className={styles.donationGrid}>
 
             {/* QR CARD */}
@@ -579,7 +562,6 @@ export default function ChurchConstructionPage() {
 
               </div>
 
-
               <div className={styles.qrBox}>
 
                 <Image
@@ -594,7 +576,6 @@ export default function ChurchConstructionPage() {
 
             </div>
 
-
             {/* BANK DETAILS */}
 
             <div className={styles.bankCard}>
@@ -608,7 +589,6 @@ export default function ChurchConstructionPage() {
                 <em> Details</em>
               </h3>
 
-
               <div className={styles.bankDetails}>
 
                 <div>
@@ -621,7 +601,6 @@ export default function ChurchConstructionPage() {
                   </strong>
                 </div>
 
-
                 <div>
                   <span>
                     ACCOUNT NUMBER
@@ -631,7 +610,6 @@ export default function ChurchConstructionPage() {
                     12180200000473
                   </strong>
                 </div>
-
 
                 <div>
                   <span>
@@ -643,7 +621,6 @@ export default function ChurchConstructionPage() {
                   </strong>
                 </div>
 
-
                 <div>
                   <span>
                     BANK
@@ -653,7 +630,6 @@ export default function ChurchConstructionPage() {
                     Indian Overseas Bank
                   </strong>
                 </div>
-
 
                 <div>
                   <span>
@@ -665,7 +641,6 @@ export default function ChurchConstructionPage() {
                     Thoothukudi
                   </strong>
                 </div>
-
 
                 <div>
                   <span>
@@ -686,7 +661,6 @@ export default function ChurchConstructionPage() {
         </div>
 
       </section>
-
 
       {/* =====================================================
           CONTACT / ADDRESS
@@ -716,7 +690,6 @@ export default function ChurchConstructionPage() {
 
             </div>
 
-
             <div className={styles.contactDetails}>
 
               <div className={styles.contactItem}>
@@ -736,7 +709,6 @@ export default function ChurchConstructionPage() {
 
               </div>
 
-
               <div className={styles.contactItem}>
 
                 <span>
@@ -748,7 +720,6 @@ export default function ChurchConstructionPage() {
                 </a>
 
               </div>
-
 
               <div className={styles.contactItem}>
 
@@ -765,7 +736,6 @@ export default function ChurchConstructionPage() {
                 </a>
 
               </div>
-
 
               <div className={styles.contactItem}>
 
@@ -791,7 +761,6 @@ export default function ChurchConstructionPage() {
 
       </section>
 
-
       {/* =====================================================
           ENGLISH CONSTRUCTION
       ===================================================== */}
@@ -814,7 +783,6 @@ export default function ChurchConstructionPage() {
 
             </div>
 
-
             <div className={styles.englishContent}>
 
               <span className={styles.sectionKicker}>
@@ -827,15 +795,15 @@ export default function ChurchConstructionPage() {
               </h2>
 
               <p>
-                Read more about the construction of the Church
-                of Our Lady, the Victorious Queen of the Universe,
-                and the vision behind this sacred project.
+                Read more about the construction project of the
+                Society of Apostles of Mary and the vision behind
+                this sacred house of prayer.
               </p>
 
               <p>
                 The church is being built with the support of
                 loving benefactors who wish to contribute towards
-                this place of prayer and devotion.
+                this place of prayer, faith and devotion.
               </p>
 
               <Link
@@ -853,7 +821,6 @@ export default function ChurchConstructionPage() {
         </div>
 
       </section>
-
 
       {/* =====================================================
           YOUTUBE
@@ -876,7 +843,6 @@ export default function ChurchConstructionPage() {
 
           </div>
 
-
           <div className={styles.videoCard}>
 
             <Image
@@ -889,9 +855,8 @@ export default function ChurchConstructionPage() {
 
             <div className={styles.videoOverlay} />
 
-
             <a
-              href={"https://youtu.be/zCDOajWtaqY?si=K0cs5lBDCiZhLNPT"}
+              href="https://youtu.be/zCDOajWtaqY?si=K0cs5lBDCiZhLNPT"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.playButton}
@@ -901,7 +866,6 @@ export default function ChurchConstructionPage() {
                 ▶
               </span>
             </a>
-
 
             <div className={styles.videoText}>
 
@@ -922,7 +886,6 @@ export default function ChurchConstructionPage() {
         </div>
 
       </section>
-
 
       {/* =====================================================
           GALLERY
@@ -953,7 +916,6 @@ export default function ChurchConstructionPage() {
             </p>
 
           </div>
-
 
           <div className={styles.galleryGrid}>
 
@@ -994,7 +956,6 @@ export default function ChurchConstructionPage() {
 
       </section>
 
-
       {/* =====================================================
           FINAL CTA
       ===================================================== */}
@@ -1003,7 +964,7 @@ export default function ChurchConstructionPage() {
 
         <Image
           src="/images/church/intro-bg.png"
-          alt="Velankanni Basilica"
+          alt="Society of Apostles of Mary"
           fill
           className={styles.finalCtaImage}
           sizes="100vw"
@@ -1011,21 +972,19 @@ export default function ChurchConstructionPage() {
 
         <div className={styles.finalCtaOverlay} />
 
-
         <div className={styles.finalCtaContent}>
 
           <div className={styles.finalMary}>
 
             <Image
               src="/images/church/mother-mary-construction.png"
-              alt="Our Blessed Mother"
+              alt="Mother Mary"
               fill
               className={styles.finalMaryImage}
               sizes="300px"
             />
 
           </div>
-
 
           <div className={styles.finalText}>
 
@@ -1036,7 +995,7 @@ export default function ChurchConstructionPage() {
             <h2>
               Help Complete
               <br />
-              <em>Our Blessed Mother&apos;s Church</em>
+              <em>A House of Prayer</em>
             </h2>
 
             <p>
@@ -1057,7 +1016,6 @@ export default function ChurchConstructionPage() {
         </div>
 
       </section>
-
 
       {/* =====================================================
           FOOTER

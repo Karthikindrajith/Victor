@@ -27,7 +27,7 @@ export default function Navbar() {
 
       <div className={styles.topBar}>
         <div className={styles.topLeft}>
-          OUR LADY OF GOOD HEALTH • Society of Apostles of Mary
+          Society of Apostles of Mary
 
         </div>
 
@@ -77,7 +77,7 @@ export default function Navbar() {
           />
 
           <div className={styles.logoText}>
-    <span>OUR LADY OF GOOD HEALTH</span>
+    <span>WELCOME TO ALL FOR GOOD HEALTH</span>
     <small></small>
   </div>
         </Link>

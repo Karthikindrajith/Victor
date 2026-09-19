@@ -8,8 +8,8 @@ const slides = [
   {
     image: "/images/church/hero-01.png",
     eyebrow: "A PLACE OF FAITH • A HOME FOR ALL",
-    title: "Our Lady of",
-    highlight: "Good Health",
+   title: "A Journey of",
+highlight: "Faith & Grace",
     description:
       "For generations, millions have come to  seeking hope, healing and peace. Experience the everlasting love of Mother Mary.",
   },

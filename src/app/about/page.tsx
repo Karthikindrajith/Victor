@@ -31,7 +31,7 @@ export default function AboutPage() {
         <div className={styles.heroVisual}>
           <Image
             src="/images/church/mother-mary.png"
-            alt="Our Lady of Good Health"
+            alt="Society of Apostles of Mary"
             fill
             priority
             sizes="65vw"
@@ -43,21 +43,21 @@ export default function AboutPage() {
         <div className={styles.heroContainer}>
           <div className={styles.heroContent}>
             <div className={styles.heroEyebrow}>
-              <span>VELANKANNI</span>
+              <span>SOCIETY OF APOSTLES OF MARY</span>
               <i>•</i>
               <span>INDIA</span>
             </div>
 
             <h1>
-              About Our
+              A Community
               <br />
-              <em>Sacred Shrine</em>
+              <em>Rooted in Faith</em>
             </h1>
 
             <p>
-              Discover the story, heritage and spiritual journey of
-              Velankanni — a place where millions come in faith,
-              hope and devotion.
+              Discover a journey of prayer, service and devotion —
+              bringing people together through faith, compassion
+              and a shared commitment to serve God and humanity.
             </p>
 
             <div className={styles.heroActions}>
@@ -120,7 +120,7 @@ export default function AboutPage() {
 
             <div className={styles.statText}>
               <strong>A PLACE OF</strong>
-              <small>FAITH &amp; HEALING</small>
+              <small>FAITH &amp; SERVICE</small>
             </div>
           </div>
 
@@ -131,7 +131,7 @@ export default function AboutPage() {
 
             <div className={styles.statText}>
               <strong>A JOURNEY OF</strong>
-              <small>HOPE</small>
+              <small>HOPE &amp; DEVOTION</small>
             </div>
           </div>
         </div>
@@ -159,22 +159,21 @@ export default function AboutPage() {
             </h2>
 
             <p className={styles.storyLead}>
-              Velankanni is more than a destination — it is a
-              place where faith meets life, where prayers are
-              heard, and where people experience the loving
-              presence of Our Lady of Good Health.
+              The Society of Apostles of Mary is a community
+              rooted in prayer, faith and service, bringing
+              people together through a shared spiritual journey.
             </p>
 
             <p>
-              For generations, pilgrims from across India and
-              around the world have travelled to this sacred
-              place carrying their prayers, gratitude, struggles
-              and hopes.
+              Through generations of devotion, service and
+              community life, the Society continues to inspire
+              people to live with faith, compassion and hope.
             </p>
 
             <p>
-              Today, the shrine continues to welcome everyone
-              with compassion, peace and a spirit of faith.
+              Today, the mission continues with a spirit of
+              prayer, service and dedication, welcoming everyone
+              with peace, love and faith.
             </p>
 
             <Link
@@ -193,7 +192,7 @@ export default function AboutPage() {
             <div className={styles.storyImage}>
               <Image
                 src="/images/church/church-01.png"
-                alt="Velankanni Basilica"
+                alt="Society of Apostles of Mary"
                 fill
                 sizes="55vw"
                 className={styles.coverImage}
@@ -206,7 +205,7 @@ export default function AboutPage() {
               <p>
                 A place
                 <br />
-                where heaven
+                where faith
                 <br />
                 touches lives.
               </p>
@@ -222,7 +221,7 @@ export default function AboutPage() {
       </section>
 
       {/* =====================================================
-          OUR LADY
+          OUR MISSION
       ===================================================== */}
       <section
         id="our-lady"
@@ -238,7 +237,7 @@ export default function AboutPage() {
 
             <Image
               src="/images/church/mother-mary.png"
-              alt="Our Lady of Good Health"
+              alt="Society of Apostles of Mary"
               fill
               sizes="50vw"
               className={styles.maryImage}
@@ -251,20 +250,19 @@ export default function AboutPage() {
           <div className={styles.maryContent}>
             <div className={styles.lightLabel}>
               <span></span>
-              <strong>OUR LADY</strong>
+              <strong>OUR MISSION</strong>
             </div>
 
             <h2>
-              Mother of
+              Called to
               <br />
-              <em>Good Health</em>
+              <em>Faith &amp; Service</em>
             </h2>
 
             <p className={styles.maryLead}>
-              Our Lady of Good Health is a symbol of love,
-              compassion and healing. Countless pilgrims have
-              experienced her intercession and continue to place
-              their trust in her.
+              The Society of Apostles of Mary seeks to build
+              a community inspired by faith, prayer, compassion
+              and service, sharing hope with everyone.
             </p>
 
             <div className={styles.maryFeatures}>
@@ -300,7 +298,7 @@ export default function AboutPage() {
               href="/contact"
               className={styles.maryButton}
             >
-              <span>Plan Your Pilgrimage</span>
+              <span>Connect With Us</span>
               <b>→</b>
             </Link>
           </div>
@@ -310,11 +308,11 @@ export default function AboutPage() {
             <div>“</div>
 
             <p>
-              With Mary,
+              With faith,
               <br />
-              we walk in faith,
+              we walk in hope,
               <br />
-              hope and love.
+              service and love.
             </p>
 
             <span></span>
@@ -344,15 +342,15 @@ export default function AboutPage() {
             </h2>
 
             <p>
-              The shrine continues its mission of prayer,
-              service and compassion, welcoming millions of
-              pilgrims every year.
+              The Society continues its mission through prayer,
+              service, compassion and community, creating a
+              welcoming space for people from every walk of life.
             </p>
 
             <p>
               Through worship, charity, community outreach and
-              spiritual guidance, Velankanni remains a place of
-              hope for all.
+              spiritual guidance, the mission remains focused on
+              faith, hope and service.
             </p>
 
             <Link
@@ -369,9 +367,8 @@ export default function AboutPage() {
             <article className={styles.missionCard}>
               <div className={styles.missionImage}>
                 <Image
-                  src="/images/church/faith-01.png
-                  "
-                  alt="Pilgrims at Velankanni"
+                  src="/images/church/faith-01.png"
+                  alt="Pilgrims"
                   fill
                   sizes="25vw"
                   className={styles.coverImage}
@@ -383,10 +380,11 @@ export default function AboutPage() {
                   ♧
                 </div>
 
-                <h3>Pilgrims</h3>
+                <h3>Community</h3>
 
                 <p>
-                  A home for every pilgrim from every nation.
+                  A welcoming community built on faith,
+                  unity and togetherness.
                 </p>
               </div>
             </article>
@@ -395,7 +393,7 @@ export default function AboutPage() {
               <div className={styles.missionImage}>
                 <Image
                   src="/images/church/faith-02.png"
-                  alt="Worship at Velankanni"
+                  alt="Worship"
                   fill
                   sizes="25vw"
                   className={styles.coverImage}
@@ -410,7 +408,8 @@ export default function AboutPage() {
                 <h3>Worship</h3>
 
                 <p>
-                  A place of prayer, healing and thanksgiving.
+                  A life of prayer, worship and spiritual
+                  devotion.
                 </p>
               </div>
             </article>
@@ -419,7 +418,7 @@ export default function AboutPage() {
               <div className={styles.missionImage}>
                 <Image
                   src="/images/church/faith-03.png"
-                  alt="Service at Velankanni"
+                  alt="Service"
                   fill
                   sizes="25vw"
                   className={styles.coverImage}
@@ -434,7 +433,8 @@ export default function AboutPage() {
                 <h3>Service</h3>
 
                 <p>
-                  Extending love and care to those in need.
+                  Extending love, care and compassion to
+                  those in need.
                 </p>
               </div>
             </article>
@@ -459,13 +459,14 @@ export default function AboutPage() {
             </div>
 
             <h2>
-              Plan Your Visit
+              Come and
               <br />
-              <em>to Velankanni</em>
+              <em>Walk in Faith</em>
             </h2>
 
             <p>
-              Experience a journey of faith, peace and renewal.
+              Experience a journey of faith, peace,
+              service and renewal.
             </p>
           </div>
 
@@ -473,7 +474,7 @@ export default function AboutPage() {
             href="/contact"
             className={styles.visitButton}
           >
-            <span>Plan Your Visit</span>
+            <span>Connect With Us</span>
             <b>→</b>
           </Link>
         </div>

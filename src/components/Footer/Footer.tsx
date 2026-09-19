@@ -26,7 +26,7 @@ export default function Footer() {
 
             <Link href="/" className={styles.logoLink}>
               <Image
-                src="/images/logo/velankanni-logo.png"
+                src="/images/logo/logo.png"
                 alt="Apostles of Mary"
                 width={150}
                 height={150}
@@ -34,15 +34,8 @@ export default function Footer() {
               />
             </Link>
 
-            <div className={styles.brandSmall}>
-              BASILICA OF
-            </div>
 
-            <h2>
-              OUR LADY OF
-              <br />
-              GOOD HEALTH
-            </h2>
+          
 
             <div className={styles.location}>
              Tuticon
@@ -352,7 +345,10 @@ export default function Footer() {
               </div>
 
               <a href="tel:+914365264296">
-                +91 4365 264 296
+                04612361989
+              </a>
+               <a href="tel:+914365264296">
+                9487609983 , 9487257479
               </a>
 
             </div>
@@ -386,8 +382,8 @@ export default function Footer() {
                 </svg>
               </div>
 
-              <a href="mailto:info@velankanni.org">
-                info@velankanni.org
+              <a href="mailto:tutirosamystica@gmail.com">
+                tutirosamystica@gmail.com
               </a>
 
             </div>
@@ -563,7 +559,7 @@ export default function Footer() {
 
             <p>
               © {new Date().getFullYear()} Society Of Apostles Of Mary.
-            </p>
+            </p>a
 
             <span>
               All Rights Reserved.
